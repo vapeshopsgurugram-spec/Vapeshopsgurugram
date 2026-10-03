@@ -12,9 +12,10 @@ import {
 } from "lucide-react";
 import { PRODUCTS, STORE_INFO } from "@/data/products";
 import { useCart } from "@/context/CartContext";
+import { Product } from "@/types/product";
 
 interface ProductCardProps {
-  product: (typeof PRODUCTS)[0];
+  product: Product;
 }
 
 export default function ProductCard({ product }: ProductCardProps) {

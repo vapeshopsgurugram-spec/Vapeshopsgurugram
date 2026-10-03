@@ -20,9 +20,10 @@ import {
 import { STORE_INFO, PRODUCTS } from "@/data/products";
 import { useCart } from "@/context/CartContext";
 import ProductCard from "@/components/ProductCard";
+import { Product } from "@/types/product";
 
 interface ProductDetailClientProps {
-  product: (typeof PRODUCTS)[0];
+  product: Product;
 }
 
 export default function ProductDetailClient({

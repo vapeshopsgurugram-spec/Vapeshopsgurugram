@@ -2,6 +2,7 @@
 
 import React, { createContext, useContext, useState, useEffect } from "react";
 import { PRODUCTS } from "@/data/products";
+import { Product } from "@/types/product";
 
 export interface CartItem {
   id: string;
@@ -15,7 +16,7 @@ export interface CartItem {
 
 interface CartContextType {
   cart: CartItem[];
-  addToCart: (product: typeof PRODUCTS[0], flavor?: string) => void;
+  addToCart: (product: Product, flavor?: string) => void;
   removeFromCart: (id: string, flavor: string) => void;
   updateQuantity: (id: string, flavor: string, delta: number) => void;
   clearCart: () => void;
@@ -32,7 +33,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
 
   const [isCartOpen, setIsCartOpen] = useState(false);
 
-  const addToCart = (product: typeof PRODUCTS[0], flavor?: string) => {
+  const addToCart = (product: Product, flavor?: string) => {
     const selectedFlavor = flavor || (product.flavors && product.flavors[0]) || "Standard";
     setCart((prev) => {
       const idx = prev.findIndex(
