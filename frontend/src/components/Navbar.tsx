@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
@@ -20,7 +20,9 @@ export default function Navbar() {
 
   const [searchQuery, setSearchQuery] = useState("");
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileSearchOpen, setIsMobileSearchOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const searchInputRef = useRef<HTMLInputElement>(null);
 
   // Activate frosted glass mask ONLY when scrolled, keep top 100% transparent
   useEffect(() => {
@@ -32,11 +34,27 @@ export default function Navbar() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  // Auto-focus search input when mobile search is opened
+  useEffect(() => {
+    if (isMobileSearchOpen) {
+      setTimeout(() => {
+        searchInputRef.current?.focus();
+      }, 100);
+    }
+  }, [isMobileSearchOpen]);
+
+  // Close drawers on route change
+  useEffect(() => {
+    setIsMobileMenuOpen(false);
+    setIsMobileSearchOpen(false);
+  }, [pathname]);
+
   const handleSearchSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
       router.push(`/search?q=${encodeURIComponent(searchQuery.trim())}`);
       setIsMobileMenuOpen(false);
+      setIsMobileSearchOpen(false);
     }
   };
 
@@ -73,7 +91,7 @@ export default function Navbar() {
           {/* Main Floating Navbar Card */}
           <div className="bg-white/85 backdrop-blur-2xl rounded-2xl sm:rounded-3xl border border-white/60 shadow-[0_10px_35px_-5px_rgba(0,0,0,0.06)] px-3.5 sm:px-6 lg:px-8 py-2 sm:py-3 transition-all">
             
-            {/* Row 1: Logo, Desktop Navigation, and Action Buttons */}
+            {/* Top Row: Logo, Navigation, and Action Buttons */}
             <div className="flex items-center justify-between gap-2 sm:gap-6">
               
               {/* 1. Left Logo */}
@@ -199,8 +217,31 @@ export default function Navbar() {
                 </form>
               </div>
 
-              {/* 4. Action Icons: WhatsApp, Cart, Menu */}
+              {/* 4. Action Icons: Small Search Button (Mobile), WhatsApp, Cart, Menu */}
               <div className="flex items-center gap-1 sm:gap-2.5 shrink-0 ml-auto md:ml-0">
+                
+                {/* Small Search Button (Visible on Mobile only, toggles search input on click) */}
+                <button
+                  type="button"
+                  onClick={() => {
+                    setIsMobileSearchOpen(!isMobileSearchOpen);
+                    if (isMobileMenuOpen) setIsMobileMenuOpen(false);
+                  }}
+                  aria-label="Toggle Search"
+                  title="Search"
+                  className={`md:hidden p-2 rounded-full transition-colors cursor-pointer ${
+                    isMobileSearchOpen
+                      ? "text-purple-600 bg-purple-50"
+                      : "text-slate-700 hover:text-purple-600 hover:bg-slate-50"
+                  }`}
+                >
+                  {isMobileSearchOpen ? (
+                    <X className="w-5 h-5 text-purple-600" />
+                  ) : (
+                    <Search className="w-5 h-5 text-slate-700" />
+                  )}
+                </button>
+
                 {/* WhatsApp Quick Order on Mobile */}
                 <a
                   href={`https://wa.me/${STORE_INFO.whatsappNumber}?text=${encodeURIComponent(
@@ -234,7 +275,10 @@ export default function Navbar() {
                 {/* Hamburger Menu Toggle (Visible on Mobile & Tablet, Hidden on Desktop) */}
                 <button
                   type="button"
-                  onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+                  onClick={() => {
+                    setIsMobileMenuOpen(!isMobileMenuOpen);
+                    if (isMobileSearchOpen) setIsMobileSearchOpen(false);
+                  }}
                   aria-label="Toggle navigation menu"
                   aria-expanded={isMobileMenuOpen}
                   className="lg:hidden p-2 text-slate-700 hover:text-purple-600 hover:bg-slate-50 rounded-full transition-colors cursor-pointer"
@@ -249,38 +293,51 @@ export default function Navbar() {
               </div>
             </div>
 
-            {/* Row 2: Mobile Search Bar (Visible ONLY on Mobile < md, 100% width, never overflows) */}
-            <div className="md:hidden mt-2 pt-1.5 border-t border-slate-100/90">
-              <form onSubmit={handleSearchSubmit} className="w-full" role="search">
-                <div className="relative flex items-center bg-white border border-slate-200/90 focus-within:border-purple-500 focus-within:ring-2 focus-within:ring-purple-100 rounded-xl pl-3 pr-0 h-[38px] transition-all shadow-2xs">
-                  <Search
-                    className="w-4 h-4 text-slate-700 shrink-0 mr-2"
-                    strokeWidth={2.2}
-                  />
-                  <input
-                    type="text"
-                    value={searchQuery}
-                    onChange={(e) => setSearchQuery(e.target.value)}
-                    placeholder="Search vapes, pods, flavors..."
-                    aria-label="Search for vapes, pods, e-liquids"
-                    className="w-full bg-transparent text-xs text-slate-800 placeholder-slate-400 font-normal focus:outline-none"
-                  />
-                  <button
-                    type="submit"
-                    aria-label="Submit search"
-                    style={{ borderRadius: "10px" }}
-                    className="h-[36px] w-[36px] -my-1 -mr-0.5 bg-[linear-gradient(225deg,#4f46e5_0%,#7c3aed_50%,#c026d3_100%)] hover:brightness-110 text-white flex items-center justify-center shadow-[0_4px_12px_rgba(147,51,234,0.35)] shrink-0 cursor-pointer transition-all active:scale-95 ml-1"
-                  >
-                    <Search className="w-4 h-4 text-white" strokeWidth={2.4} />
-                  </button>
-                </div>
-              </form>
-            </div>
+            {/* Mobile Search Bar Dropdown (Opens smoothly ONLY on clicking the small search button) */}
+            {isMobileSearchOpen && (
+              <div className="md:hidden mt-2 pt-2 border-t border-slate-100 animate-in fade-in slide-in-from-top-2 duration-200">
+                <form onSubmit={handleSearchSubmit} className="w-full" role="search">
+                  <div className="relative flex items-center bg-white border border-purple-300 focus-within:border-purple-600 focus-within:ring-2 focus-within:ring-purple-100 rounded-xl pl-3 pr-0 h-[40px] transition-all shadow-xs">
+                    <Search
+                      className="w-4 h-4 text-purple-600 shrink-0 mr-2"
+                      strokeWidth={2.2}
+                    />
+                    <input
+                      ref={searchInputRef}
+                      type="text"
+                      value={searchQuery}
+                      onChange={(e) => setSearchQuery(e.target.value)}
+                      placeholder="Search vapes, pods, flavors..."
+                      aria-label="Search for vapes, pods, e-liquids"
+                      className="w-full bg-transparent text-xs text-slate-800 placeholder-slate-400 font-normal focus:outline-none"
+                    />
+                    {searchQuery && (
+                      <button
+                        type="button"
+                        onClick={() => setSearchQuery("")}
+                        className="p-1 text-slate-400 hover:text-slate-600 mr-1"
+                        aria-label="Clear search text"
+                      >
+                        <X className="w-3.5 h-3.5" />
+                      </button>
+                    )}
+                    <button
+                      type="submit"
+                      aria-label="Submit search"
+                      style={{ borderRadius: "10px" }}
+                      className="h-[38px] w-[38px] -my-1 -mr-0.5 bg-[linear-gradient(225deg,#4f46e5_0%,#7c3aed_50%,#c026d3_100%)] hover:brightness-110 text-white flex items-center justify-center shadow-sm shrink-0 cursor-pointer transition-all active:scale-95 ml-1"
+                    >
+                      <Search className="w-4 h-4 text-white" strokeWidth={2.4} />
+                    </button>
+                  </div>
+                </form>
+              </div>
+            )}
           </div>
 
           {/* 5. Mobile & Tablet Navigation Drawer (Fully Responsive) */}
           {isMobileMenuOpen && (
-            <div className="mt-2 bg-white/98 backdrop-blur-xl rounded-2xl border border-slate-100 shadow-2xl p-4 animate-fadeIn">
+            <div className="mt-2 bg-white/98 backdrop-blur-xl rounded-2xl border border-slate-100 shadow-2xl p-4 animate-in fade-in slide-in-from-top-2 duration-200">
               <nav aria-label="Mobile Navigation" className="flex flex-col space-y-1">
                 {/* Home */}
                 <Link
