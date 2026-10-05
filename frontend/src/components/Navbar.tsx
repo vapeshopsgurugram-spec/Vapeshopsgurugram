@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useRef } from "react";
+import Image from "next/image";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
 import {
@@ -64,10 +65,10 @@ export default function Navbar() {
     "@type": "SiteNavigationElement",
     name: ["Home", "Products", "About", "Contact"],
     url: [
-      "https://vapeshopsgurugram.com",
-      "https://vapeshopsgurugram.com/products",
-      "https://vapeshopsgurugram.com/about",
-      "https://vapeshopsgurugram.com/contact",
+      "https://vapestoregurugram.com",
+      "https://vapestoregurugram.com/products",
+      "https://vapestoregurugram.com/about",
+      "https://vapestoregurugram.com/contact",
     ],
   };
 
@@ -97,18 +98,30 @@ export default function Navbar() {
               {/* 1. Left Logo */}
               <Link
                 href="/"
-                className="flex flex-col shrink-0 select-none group focus:outline-none"
-                title="VapeShop in Gurgaon - Home"
+                className="flex items-center gap-2.5 shrink-0 select-none group focus:outline-none"
+                title="Vape Store in Gurgaon - Home"
               >
-                <div className="flex items-center text-lg sm:text-2xl font-black tracking-tight leading-none">
-                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-500">
-                    Vape
-                  </span>
-                  <span className="text-slate-900 font-extrabold">Shop</span>
+                <div className="relative w-8 h-8 sm:w-9 sm:h-9 rounded-xl overflow-hidden shrink-0 shadow-sm group-hover:scale-105 transition-transform">
+                  <Image
+                    src="/icon.png"
+                    alt="Vape Store Gurgaon Logo"
+                    fill
+                    priority
+                    sizes="36px"
+                    className="object-cover"
+                  />
                 </div>
-                <span className="text-[7.5px] sm:text-[9px] font-bold text-slate-400 tracking-[0.2em] uppercase mt-0.5 group-hover:text-purple-600 transition-colors">
-                  IN GURGAON
-                </span>
+                <div className="flex flex-col">
+                  <div className="flex items-center text-lg sm:text-2xl font-black tracking-tight leading-none">
+                    <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-500">
+                      Vape
+                    </span>
+                    <span className="text-slate-900 font-extrabold">Store</span>
+                  </div>
+                  <span className="text-[7.5px] sm:text-[9px] font-bold text-slate-400 tracking-[0.2em] uppercase mt-0.5 group-hover:text-purple-600 transition-colors">
+                    IN GURGAON
+                  </span>
+                </div>
               </Link>
 
               {/* 2. Desktop Navigation Links (Spaced away from brand name) */}
@@ -398,7 +411,7 @@ export default function Navbar() {
                 </Link>
               </nav>
 
-              {/* Express Gurugram delivery callout in mobile menu */}
+              {/* Express Gurgaon delivery callout in mobile menu */}
               <div className="mt-4 pt-3 border-t border-slate-100 flex flex-col gap-2">
                 <a
                   href={`https://wa.me/${STORE_INFO.whatsappNumber}?text=${encodeURIComponent(

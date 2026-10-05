@@ -16,15 +16,24 @@ import {
 import { STORE_INFO } from "@/data/products";
 
 export const metadata: Metadata = {
-  title: "About Us | Vapeshopsgurugram - Premier Vape Store in Gurgaon",
+  title: "About Us | Vape Store Gurgaon - Premier Vapes & Pods",
   description:
-    "Learn about Vapeshopsgurugram, Gurugram's most trusted online store for 100% authentic disposable vapes, pod systems, and nicotine salts with 30-60 min express delivery.",
+    "Learn about Vape Store Gurgaon, Gurgaon's most trusted online store for 100% authentic disposable vapes, pod systems, and nicotine salts with 30-60 min express delivery.",
   keywords: [
-    "About Vapeshopsgurugram",
-    "Vape shop Gurugram story",
+    "About Vape Store Gurgaon",
+    "Vape Store Gurgaon story",
     "Authentic vape store Gurgaon",
     "Express vape delivery DLF Gurgaon",
   ],
+  alternates: {
+    canonical: "/about",
+  },
+  openGraph: {
+    title: "About Us | Vape Store Gurgaon",
+    description: "Gurgaon's trusted source for 100% genuine vapes, pods & express delivery.",
+    url: "https://vapestoregurugram.com/about",
+    siteName: "Vape Store Gurgaon",
+  },
 };
 
 const STATS = [
@@ -74,22 +83,41 @@ const COVERAGE_HUBS = [
 
 export default function AboutPage() {
   const whatsappUrl = `https://wa.me/${STORE_INFO.whatsappNumber}?text=${encodeURIComponent(
-    "Hi Vapeshopsgurugram! I'm on your About page and would like to ask a question."
+    "Hi Vape Store Gurgaon! I'm on your About page and would like to ask a question."
   )}`;
+
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://vapestoregurugram.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "About Us",
+        item: "https://vapestoregurugram.com/about",
+      },
+    ],
+  };
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
     "@type": "VapeShop",
-    name: "Vapeshopsgurugram",
-    image: "https://vapeshopsgurugram.com/banners/hero-banner.png",
-    "@id": "https://vapeshopsgurugram.com",
-    url: "https://vapeshopsgurugram.com",
+    name: "Vape Store Gurgaon",
+    image: "https://vapestoregurugram.com/banners/vapestoregurgaon%20banner.png",
+    "@id": "https://vapestoregurugram.com/#store",
+    url: "https://vapestoregurugram.com",
     telephone: STORE_INFO.phone,
     priceRange: "₹₹",
     address: {
       "@type": "PostalAddress",
       streetAddress: "Galleria Market, DLF Phase 4",
-      addressLocality: "Gurugram",
+      addressLocality: "Gurgaon",
       postalCode: "122002",
       addressRegion: "Haryana",
       addressCountry: "IN",
@@ -122,6 +150,10 @@ export default function AboutPage() {
     <>
       <script
         type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
+      <script
+        type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
       />
       <main className="min-h-screen bg-slate-50/70 pb-20 pt-24 sm:pt-28">
@@ -144,18 +176,18 @@ export default function AboutPage() {
           <div className="relative z-10 max-w-3xl space-y-6">
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-500/20 border border-emerald-400/30 text-emerald-300 text-xs font-bold uppercase tracking-wider">
               <Sparkles className="w-3.5 h-3.5" />
-              <span>Gurugram&apos;s #1 Trusted Vape Destination</span>
+              <span>Gurgaon&apos;s #1 Trusted Vape Destination</span>
             </div>
 
             <h1 className="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight leading-snug">
               Elevating the Vape Experience in{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-emerald-400 via-teal-300 to-cyan-300">
-                Gurugram &amp; Delhi NCR
+                Gurgaon &amp; Delhi NCR
               </span>
             </h1>
 
             <p className="text-slate-300 text-xs sm:text-sm leading-relaxed max-w-2xl">
-              Founded in the heart of Millennium City, <strong>Vapeshopsgurugram</strong> was created with a clear mission: to provide vape enthusiasts with 100% genuine products, fair pricing, and lightning-fast doorstep delivery in 30 to 60 minutes.
+              Founded in the heart of Millennium City, <strong>Vape Store Gurgaon</strong> was created with a clear mission: to provide vape enthusiasts with 100% genuine products, fair pricing, and lightning-fast doorstep delivery in 30 to 60 minutes.
             </p>
 
             <div className="flex flex-wrap gap-3 pt-2">
@@ -204,13 +236,13 @@ export default function AboutPage() {
         <section className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12 items-center">
           <div className="space-y-5">
             <span className="text-xs font-bold text-emerald-600 uppercase tracking-wider flex items-center gap-1.5">
-              <Award className="w-4 h-4" /> Why Choose Vapeshopsgurugram
+              <Award className="w-4 h-4" /> Why Choose Vape Store Gurgaon
             </span>
             <h2 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight leading-snug">
               Authenticity, Speed &amp; Customer Satisfaction at Our Core
             </h2>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
-              In a market filled with counterfeit vape pods and unreliable delivery promises, <strong>Vapeshopsgurugram</strong> stands out by enforcing strict authenticity controls. We source directly from official authorized distributors of globally renowned brands including <strong>Elfbar</strong>, <strong>Yuoto</strong>, <strong>Elfworld</strong>, <strong>Uwell Caliburn</strong>, and <strong>Lost Mary</strong>.
+              In a market filled with counterfeit vape pods and unreliable delivery promises, <strong>Vape Store Gurgaon</strong> stands out by enforcing strict authenticity controls. We source directly from official authorized distributors of globally renowned brands including <strong>Elfbar</strong>, <strong>Yuoto</strong>, <strong>Elfworld</strong>, <strong>Uwell Caliburn</strong>, and <strong>Lost Mary</strong>.
             </p>
             <p className="text-slate-600 text-xs sm:text-sm leading-relaxed">
               Every device is factory-sealed, stored in climate-controlled conditions to preserve e-liquid flavor integrity, and dispatched with tamper-evident seals. Whether you need a refill at DLF Phase 5 at midnight or an urgent delivery at Cyber City during office hours, our local courier fleet gets it to you in under an hour.
@@ -245,7 +277,7 @@ export default function AboutPage() {
                 <Truck className="w-4 h-4" /> 30-60 Minute Local Hubs
               </span>
               <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-                Gurugram &amp; NCR Express Coverage
+                Gurgaon &amp; NCR Express Coverage
               </h2>
             </div>
             <span className="text-xs font-semibold text-slate-500">

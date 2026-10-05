@@ -8,6 +8,6 @@ export default function robots(): MetadataRoute.Robots {
         allow: "/",
       },
     ],
-    sitemap: "https://vapeshopsgurugram.com/sitemap.xml",
+    sitemap: "https://vapestoregurugram.com/sitemap.xml",
   };
 }

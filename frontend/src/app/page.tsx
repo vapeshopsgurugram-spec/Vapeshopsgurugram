@@ -27,11 +27,11 @@ const DELIVERY_HUBS = [
 const FAQS = [
   {
     q: "Do you deliver vapes in Gurgaon, Delhi and Noida?",
-    a: "Yes! We provide 30 to 60-minute instant delivery across all sectors of Gurugram (DLF, Cyber City, Golf Course Road, Sohna Road), as well as fast same-day express delivery across South Delhi, Central Delhi, West Delhi, Noida, and Greater Noida.",
+    a: "Yes! We provide 30 to 60-minute instant delivery across all sectors of Gurgaon (DLF, Cyber City, Golf Course Road, Sohna Road), as well as fast same-day express delivery across South Delhi, Central Delhi, West Delhi, Noida, and Greater Noida.",
   },
   {
     q: "How can I order vapes in Delhi NCR with Cash on Delivery?",
-    a: "You can easily order directly through our website cart or via WhatsApp (+91 89509 53934). We accept Cash on Delivery (COD) and doorstep UPI (Google Pay, PhonePe, Paytm) across Gurugram, Delhi, and Noida.",
+    a: "You can easily order directly through our website cart or via WhatsApp (+91 89509 53934). We accept Cash on Delivery (COD) and doorstep UPI (Google Pay, PhonePe, Paytm) across Gurgaon, Delhi, and Noida.",
   },
   {
     q: "Are the vapes and pod kits 100% authentic?",
@@ -62,11 +62,34 @@ export default function HomePage() {
     })),
   };
 
+  // Structured ItemList Schema for Featured Products
+  const itemListSchema = {
+    "@context": "https://schema.org",
+    "@type": "ItemList",
+    name: "Featured Vape Devices & Disposables - Vape Store Gurgaon",
+    description: "Trending disposable vapes, pod kits and e-liquids available in Gurgaon & Delhi NCR.",
+    url: "https://vapestoregurugram.com",
+    numberOfItems: PRODUCTS.length,
+    itemListElement: PRODUCTS.slice(0, 16).map((prod, idx) => ({
+      "@type": "ListItem",
+      position: idx + 1,
+      name: prod.name,
+      url: `https://vapestoregurugram.com/product/${prod.slug}`,
+      image: prod.image?.startsWith("http")
+        ? prod.image
+        : `https://vapestoregurugram.com${prod.image || "/products/elfbar-gh23000-bluerazz.jpg"}`,
+    })),
+  };
+
   return (
     <>
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(itemListSchema) }}
       />
 
       {/* Hero Auto-Slide Banner (Navbar floats above it) */}
@@ -89,12 +112,12 @@ export default function HomePage() {
                 <span>30-60 Min Express Delivery</span>
               </span>
               <span className="text-slate-300">|</span>
-              <span className="text-slate-600 font-medium">Gurugram • Delhi • Noida NCR</span>
+              <span className="text-slate-600 font-medium">Gurgaon • Delhi • Noida NCR</span>
             </div>
 
             {/* Primary SEO H1 Headline */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.14]">
-              Gurugram, Delhi &amp; Noida&apos;s #1{" "}
+              Gurgaon, Delhi &amp; Noida&apos;s #1{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-500">
                 Vape &amp; Pod
               </span>{" "}
@@ -104,7 +127,7 @@ export default function HomePage() {
             {/* Keyword-Rich SEO Location Description */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
               100% Authentic disposable vapes, refillable pod systems, and premium imported nic salts. 30–60 min instant courier in{" "}
-              <strong className="text-slate-900 font-bold">Gurugram</strong> (DLF, Cyber City, Golf Course Rd), and same-day delivery across{" "}
+              <strong className="text-slate-900 font-bold">Gurgaon</strong> (DLF, Cyber City, Golf Course Rd), and same-day delivery across{" "}
               <strong className="text-slate-900 font-bold">Delhi</strong> &amp;{" "}
               <strong className="text-slate-900 font-bold">Noida NCR</strong> with Cash on Delivery (COD).
             </p>
@@ -148,7 +171,7 @@ export default function HomePage() {
                 <h4 className="text-xs sm:text-sm font-black text-slate-900 group-hover:text-purple-700 transition-colors">
                   30-60 Mins
                 </h4>
-                <p className="text-[11px] text-slate-500 truncate font-medium">Gurugram Express</p>
+                <p className="text-[11px] text-slate-500 truncate font-medium">Gurgaon Express</p>
               </div>
             </div>
 
@@ -207,14 +230,14 @@ export default function HomePage() {
           </div>
         </section>
 
-        {/* 3. Gurugram, Delhi & Noida Delivery Hubs */}
+        {/* 3. Gurgaon, Delhi & Noida Delivery Hubs */}
         <section className="p-6 sm:p-10 rounded-3xl bg-white border border-slate-100 shadow-sm space-y-8">
           <div className="text-center max-w-2xl mx-auto space-y-2">
             <span className="text-xs font-bold text-purple-600 uppercase tracking-wider">
               Delhi NCR Delivery Network
             </span>
             <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
-              Express Delivery Across Gurugram, Delhi &amp; Noida
+              Express Delivery Across Gurgaon, Delhi &amp; Noida
             </h2>
             <p className="text-xs sm:text-sm text-slate-500">
               30–60 min courier in Gurgaon • Same-day express dispatch across South Delhi, Central Delhi, and Noida NCR.
@@ -254,13 +277,13 @@ export default function HomePage() {
               Buy Authentic Vapes, Pods &amp; E-Liquids in Gurgaon, Delhi &amp; Noida NCR
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Welcome to <strong>Vapeshopsgurugram</strong>, your trusted online destination for 100% genuine vaping devices, disposable pod bars, refillable kits, and imported nicotine salt e-liquids in the Delhi NCR region. Whether you are searching for <em>&quot;vape shop in Gurgaon&quot;</em>, <em>&quot;vape delivery in Delhi&quot;</em>, or <em>&quot;vape store in Noida&quot;</em>, we provide lightning-fast doorstep service with genuine factory scratch-code verification.
+              Welcome to <strong>Vape Store Gurgaon</strong>, your trusted online destination for 100% genuine vaping devices, disposable pod bars, refillable kits, and imported nicotine salt e-liquids in the Delhi NCR region. Whether you are searching for <em>&quot;Vape Store in Gurgaon&quot;</em>, <em>&quot;vape delivery in Delhi&quot;</em>, or <em>&quot;vape store in Noida&quot;</em>, we provide lightning-fast doorstep service with genuine factory scratch-code verification.
             </p>
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-3 pt-2 text-xs">
             <div className="p-3.5 rounded-2xl bg-white border border-purple-100 shadow-2xs space-y-1">
-              <h4 className="font-bold text-purple-700">Gurugram Express (30–60m)</h4>
+              <h4 className="font-bold text-purple-700">Gurgaon Express (30–60m)</h4>
               <p className="text-slate-500 text-[11px] leading-relaxed">
                 Direct doorstep dispatch to DLF Phase 1-5, Cyber City, Golf Course Road, Sohna Road, Galleria Market, and all Gurgaon sectors with Cash on Delivery.
               </p>
@@ -282,7 +305,7 @@ export default function HomePage() {
           {/* Popular Trending Keywords Quick Cloud */}
           <div className="pt-3 border-t border-purple-100/60 space-y-2">
             <span className="text-[11px] font-bold text-slate-500 uppercase tracking-wider block">
-              Trending Searches in Gurugram, Delhi &amp; Noida:
+              Trending Searches in Gurgaon, Delhi &amp; Noida:
             </span>
             <div className="flex flex-wrap gap-1.5 text-[11px]">
               {[

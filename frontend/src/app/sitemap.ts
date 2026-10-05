@@ -2,7 +2,7 @@ import { MetadataRoute } from "next";
 import { PRODUCTS, CATEGORIES } from "@/data/products";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = "https://vapeshopsgurugram.com";
+  const baseUrl = "https://vapestoregurugram.com";
 
   // Static Pages
   const staticPages: MetadataRoute.Sitemap = [

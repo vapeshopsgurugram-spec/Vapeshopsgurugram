@@ -52,7 +52,7 @@ export default function ProductDetailClient({
   const whatsappMessage = encodeURIComponent(
     `Hi ${STORE_INFO.name}, I would like to order:\n\n*${product.name}*\n- Quantity: ${quantity}\n- Total Price: ₹${(
       product.price * quantity
-    ).toLocaleString("en-IN")}\n\nPlease deliver to my location in Gurugram / Delhi NCR.`
+    ).toLocaleString("en-IN")}\n\nPlease deliver to my location in Gurgaon / Delhi NCR.`
   );
 
   // Other related products
@@ -85,14 +85,14 @@ export default function ProductDetailClient({
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
           <Link
-            href="/"
+            href="/products"
             className="hover:text-purple-600 font-medium transition-colors"
           >
             Products
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-slate-400 shrink-0" />
           <Link
-            href={`/?brand=${product.brand.toLowerCase()}`}
+            href={`/search?q=${encodeURIComponent(product.brand)}`}
             className="hover:text-purple-600 font-medium transition-colors uppercase"
           >
             {product.brand}
@@ -110,7 +110,7 @@ export default function ProductDetailClient({
             <div className="relative rounded-3xl overflow-hidden bg-[#faf7f2] border border-slate-200/90 shadow-[0_8px_30px_rgb(0,0,0,0.06)] aspect-square flex items-center justify-center group">
               <Image
                 src={product.image || "/products/elfbar-gh23000-bluerazz.jpg"}
-                alt={product.name}
+                alt={`${product.name} | Vape Store Gurgaon`}
                 fill
                 priority
                 sizes="(max-width: 1024px) 100vw, 520px"
@@ -149,11 +149,9 @@ export default function ProductDetailClient({
             {/* Product Title (Clean, balanced font size & weight) */}
             <h1 className="text-xl sm:text-2xl lg:text-[26px] font-bold text-slate-900 tracking-tight leading-snug mt-2.5">
               {product.name}
-              {product.storeLocation && (
-                <span className="text-slate-400 font-medium text-base sm:text-lg block sm:inline sm:ml-2">
-                  – {product.storeLocation}
-                </span>
-              )}
+              <span className="text-slate-400 font-medium text-base sm:text-lg block sm:inline sm:ml-2">
+                – Vape Store Gurgaon
+              </span>
             </h1>
 
             {/* Star Rating, Reviews & Sold Count */}
@@ -399,7 +397,7 @@ export default function ProductDetailClient({
                   You May Also Like
                 </span>
                 <h3 className="text-xl sm:text-2xl font-black text-slate-900 tracking-tight">
-                  Related Vapes in Gurugram
+                  Related Vapes in Gurgaon
                 </h3>
               </div>
               <Link

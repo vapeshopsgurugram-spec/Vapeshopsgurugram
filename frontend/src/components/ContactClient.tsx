@@ -23,7 +23,7 @@ const QUICK_ACTIONS = [
     icon: Zap,
     title: "Instant Doorstep Order",
     desc: "Order directly via WhatsApp for 30-60 min doorstep delivery.",
-    message: "Hi Vapeshopsgurugram! I want to place a quick order for express delivery in Gurugram.",
+    message: "Hi Vape Store Gurgaon! I want to place a quick order for express delivery in Gurgaon.",
     badge: "Fastest Option",
     badgeColor: "bg-emerald-500 text-white",
   },
@@ -31,7 +31,7 @@ const QUICK_ACTIONS = [
     icon: Sparkles,
     title: "Flavor & Nic Salt Advice",
     desc: "Need recommendations? Ask our flavor specialist about top trend ice flavors.",
-    message: "Hi Vapeshopsgurugram! Can you recommend your best selling flavors in stock?",
+    message: "Hi Vape Store Gurgaon! Can you recommend your best selling flavors in stock?",
     badge: "Expert Advice",
     badgeColor: "bg-purple-100 text-purple-700",
   },
@@ -39,7 +39,7 @@ const QUICK_ACTIONS = [
     icon: ShieldCheck,
     title: "Device & Stock Inquiry",
     desc: "Check stock availability for Elfbar, Yuoto, Elfworld, or Caliburn kits.",
-    message: "Hi Vapeshopsgurugram! I want to check availability for specific vape devices.",
+    message: "Hi Vape Store Gurgaon! I want to check availability for specific vape devices.",
     badge: "Live Stock",
     badgeColor: "bg-blue-100 text-blue-700",
   },
@@ -47,13 +47,13 @@ const QUICK_ACTIONS = [
     icon: Truck,
     title: "Track Rider & Delivery ETA",
     desc: "Already ordered? Get real-time dispatch updates and rider contact info.",
-    message: "Hi Vapeshopsgurugram! Can you share rider ETA and status for my recent order?",
+    message: "Hi Vape Store Gurgaon! Can you share rider ETA and status for my recent order?",
     badge: "Live Tracking",
     badgeColor: "bg-amber-100 text-amber-800",
   },
 ];
 
-const GURUGRAM_SECTORS = [
+const Gurgaon_SECTORS = [
   { name: "DLF Phase 1, 2, 3, 4 & 5", time: "20-30 mins", active: true },
   { name: "Cyber City & Cyber Hub", time: "20-30 mins", active: true },
   { name: "Golf Course Road (Sec 42-54)", time: "25-35 mins", active: true },
@@ -68,11 +68,11 @@ export default function ContactClient() {
   const directWhatsAppUrl = (customText?: string) =>
     `https://wa.me/${STORE_INFO.whatsappNumber}?text=${encodeURIComponent(
       customText ||
-        "Hi Vapeshopsgurugram! I want to order authentic vapes for doorstep delivery in Gurugram."
+        "Hi Vape Store Gurgaon! I want to order authentic vapes for doorstep delivery in Gurgaon."
     )}`;
 
   const googleMapsUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
-    "Galleria Market, DLF Phase 4, Gurugram, Haryana 122002"
+    "Galleria Market, DLF Phase 4, Gurgaon, Haryana 122002"
   )}`;
 
   return (
@@ -101,7 +101,7 @@ export default function ContactClient() {
           </h1>
 
           <p className="text-slate-300 text-xs sm:text-sm sm:leading-relaxed max-w-2xl">
-            Choose a quick option below to chat directly with our Gurugram store manager on WhatsApp, or call our direct order hotline for immediate delivery.
+            Choose a quick option below to chat directly with our Gurgaon store manager on WhatsApp, or call our direct order hotline for immediate delivery.
           </p>
 
           <div className="flex flex-wrap gap-3 pt-2">
@@ -240,11 +240,11 @@ export default function ContactClient() {
               <span className="text-[10px] font-bold text-indigo-600 uppercase tracking-wider block">
                 Store Location
               </span>
-              <h4 className="text-sm font-bold text-slate-900">Gurugram Outlet</h4>
+              <h4 className="text-sm font-bold text-slate-900">Gurgaon Outlet</h4>
             </div>
           </div>
           <p className="text-[11px] text-slate-600 font-medium">
-            Galleria Market, DLF Phase 4, Gurugram 122002
+            Galleria Market, DLF Phase 4, Gurgaon 122002
           </p>
         </div>
 
@@ -276,7 +276,7 @@ export default function ContactClient() {
               <Compass className="w-4 h-4" /> Visit Our Store
             </span>
             <h3 className="text-xl sm:text-2xl font-black text-slate-900">
-              Galleria Market, DLF Phase 4, Gurugram
+              Galleria Market, DLF Phase 4, Gurgaon
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
               Located in one of Gurgaon’s premier shopping destinations. Easily accessible via MG Road, Golf Course Road, and the Phase 1 Rapid Metro station.
@@ -339,7 +339,7 @@ export default function ContactClient() {
           </div>
 
           <div className="space-y-2">
-            {GURUGRAM_SECTORS.map((sector, i) => (
+            {Gurgaon_SECTORS.map((sector, i) => (
               <div
                 key={i}
                 className="p-2.5 rounded-xl bg-white/5 border border-white/10 flex items-center justify-between text-xs"

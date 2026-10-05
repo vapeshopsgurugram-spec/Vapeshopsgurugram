@@ -39,9 +39,9 @@ export default function ProductCard({ product }: ProductCardProps) {
   };
 
   const whatsappMessage = encodeURIComponent(
-    `Hi Vapeshopsgurugram! I want to order:\n- Product: ${product.name}\n- Qty: ${quantity}\n- Price: ₹${(
+    `Hi Vape Store Gurgaon! I want to order:\n- Product: ${product.name}\n- Qty: ${quantity}\n- Price: ₹${(
       product.price * quantity
-    ).toLocaleString("en-IN")}\nPlease deliver to my location in Gurugram / Delhi NCR.`
+    ).toLocaleString("en-IN")}\nPlease deliver to my location in Gurgaon / Delhi NCR.`
   );
 
   return (
@@ -66,7 +66,7 @@ export default function ProductCard({ product }: ProductCardProps) {
         >
           <Image
             src={product.image}
-            alt={product.name}
+            alt={`${product.name} | Vape Store Gurgaon`}
             fill
             sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw"
             className="object-cover object-center group-hover:scale-105 transition-transform duration-500"

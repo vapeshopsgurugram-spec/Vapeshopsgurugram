@@ -8,8 +8,8 @@ export const metadata: Metadata = {
   description:
     "Order authentic disposable vapes and pods online in Gurgaon. Call or WhatsApp +91 89509 53934 for 30-60 minute express delivery across DLF, Cyber City, and Delhi NCR.",
   keywords: [
-    "Contact Vape Shop Gurgaon",
-    "WhatsApp vape order Gurugram",
+    "Contact Vape Store Gurgaon",
+    "WhatsApp vape order Gurgaon",
     "Vape delivery phone number Gurgaon",
     "DLF Phase 4 vape store",
     "Same day vape delivery Delhi NCR",
@@ -20,26 +20,46 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Contact & Fast Delivery | " + STORE_INFO.name,
     description: "Instant 30-60 min doorstep vape delivery across Gurgaon & Delhi NCR. WhatsApp +91 89509 53934.",
-    url: "https://vapeshopsgurugram.com/contact",
+    url: "https://vapestoregurugram.com/contact",
+    siteName: "Vape Store Gurgaon",
   },
 };
 
 export default function ContactPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://vapestoregurugram.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Contact",
+        item: "https://vapestoregurugram.com/contact",
+      },
+    ],
+  };
+
   const contactSchema = {
     "@context": "https://schema.org",
     "@type": "ContactPage",
-    name: "Contact Vapeshopsgurugram",
-    description: "Contact Vapeshopsgurugram for doorstep vape delivery across Gurugram and Delhi NCR.",
-    url: "https://vapeshopsgurugram.com/contact",
+    name: "Contact Vape Store Gurgaon",
+    description: "Contact Vape Store Gurgaon for doorstep vape delivery across Gurgaon and Delhi NCR.",
+    url: "https://vapestoregurugram.com/contact",
     mainEntity: {
       "@type": "VapeShop",
-      name: "Vapeshopsgurugram",
+      name: "Vape Store Gurgaon",
       telephone: STORE_INFO.phone,
-      url: "https://vapeshopsgurugram.com",
+      url: "https://vapestoregurugram.com",
       address: {
         "@type": "PostalAddress",
         streetAddress: "Galleria Market, DLF Phase 4",
-        addressLocality: "Gurugram",
+        addressLocality: "Gurgaon",
         postalCode: "122002",
         addressRegion: "Haryana",
         addressCountry: "IN",
@@ -50,6 +70,10 @@ export default function ContactPage() {
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(contactSchema) }}

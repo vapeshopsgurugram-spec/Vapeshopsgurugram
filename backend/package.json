@@ -1,7 +1,7 @@
 {
   "name": "vapeshops-backend",
   "version": "1.0.0",
-  "description": "Backend API service for VapeShops Gurugram",
+  "description": "Backend API service for VapeShops Gurgaon",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -9,7 +9,7 @@
   },
   "keywords": [
     "vapeshops",
-    "gurugram",
+    "Gurgaon",
     "api"
   ],
   "author": "",

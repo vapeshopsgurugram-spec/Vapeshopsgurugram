@@ -16,7 +16,7 @@ export async function generateMetadata({
     title: query
       ? `Search results for "${query}" | ${STORE_INFO.name}`
       : `Search Vapes & Pods | ${STORE_INFO.name}`,
-    description: `Find authentic vapes, disposables, pod kits, and e-liquids matching "${query}" in Gurugram & Delhi NCR.`,
+    description: `Find authentic vapes, disposables, pod kits, and e-liquids matching "${query}" in Gurgaon & Delhi NCR.`,
   };
 }
 
@@ -69,7 +69,7 @@ export default async function SearchPage({
           </h1>
           <p className="text-xs sm:text-sm text-slate-500 mt-1">
             {results.length > 0
-              ? `Found ${results.length} authentic product${results.length > 1 ? "s" : ""} available for express delivery in Gurugram.`
+              ? `Found ${results.length} authentic product${results.length > 1 ? "s" : ""} available for express delivery in Gurgaon.`
               : `No products matching "${query}" found. Showing popular recommendations below.`}
           </p>
         </div>

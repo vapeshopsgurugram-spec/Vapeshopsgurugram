@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import Link from "next/link";
 import {
   MapPin,
@@ -18,10 +19,10 @@ export default function Footer() {
 
 
   const POPULAR_SEARCHES = [
-    { text: "Vape Shop in Gurgaon", href: "/products" },
+    { text: "Vape Store in Gurgaon", href: "/products" },
     { text: "Vape Delivery Delhi", href: "/products" },
     { text: "Vape Store in Noida", href: "/products" },
-    { text: "Vape Shop Near Me", href: "/products" },
+    { text: "Vape Store Near Me", href: "/products" },
     { text: "Disposable Vapes Gurgaon", href: "/category/disposable-vapes" },
     { text: "Yuoto Thanos 5000 Puffs", href: "/search?q=Yuoto" },
     { text: "Lost Mary 15000 Turbo", href: "/search?q=Lost+Mary" },
@@ -33,12 +34,12 @@ export default function Footer() {
     { text: "Cash on Delivery Vapes Gurgaon & Delhi", href: "/products" },
     { text: "South Delhi Vape Delivery (Saket & GK)", href: "/products" },
     { text: "Hauz Khas & Green Park Vape Delivery", href: "/products" },
-    { text: "DLF Cyber City & Galleria Vape Shop", href: "/contact" },
+    { text: "DLF Cyber City & Galleria Vape Store", href: "/contact" },
     { text: "Golf Course Road Vape Delivery", href: "/products" },
-    { text: "Sohna Road Gurugram Vapes", href: "/products" },
+    { text: "Sohna Road Gurgaon Vapes", href: "/products" },
     { text: "Noida Sector 18 & 62 Vape Store", href: "/products" },
     { text: "Greater Noida Same Day Delivery", href: "/products" },
-    { text: "Dwarka & West Delhi Vape Shop", href: "/products" },
+    { text: "Dwarka & West Delhi Vape Store", href: "/products" },
     { text: "Nic Salt E-Liquids 20mg / 50mg", href: "/category/e-liquids" },
     { text: "Vape Replacement Pods & Coils", href: "/category/coils-pods" },
     { text: "Authentic Vape Store Delhi NCR", href: "/about" },
@@ -59,7 +60,7 @@ export default function Footer() {
                   30-60m &amp; Same-Day
                 </h4>
                 <p className="text-[11px] sm:text-xs text-slate-400">
-                  Instant Gurugram • Same-Day Delhi &amp; Noida
+                  Instant Gurgaon • Same-Day Delhi &amp; Noida
                 </p>
               </div>
             </div>
@@ -114,27 +115,38 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 sm:gap-10 pb-12 border-b border-slate-800/80">
           {/* Brand & Local Authority (2 columns on large screens) */}
           <div className="lg:col-span-2 space-y-4">
-            <Link href="/" className="inline-flex flex-col group">
-              <div className="flex items-center text-2xl font-black tracking-tight leading-none">
-                <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-pink-400">
-                  Vape
-                </span>
-                <span className="text-white font-extrabold">Shop</span>
+            <Link href="/" className="inline-flex items-center gap-3 group">
+              <div className="relative w-10 h-10 rounded-2xl overflow-hidden shrink-0 shadow-md border border-slate-800">
+                <Image
+                  src="/icon.png"
+                  alt="Vape Store Gurgaon Logo"
+                  fill
+                  sizes="40px"
+                  className="object-cover"
+                />
               </div>
-              <span className="text-[9px] font-bold text-purple-400/90 tracking-[0.25em] uppercase mt-1">
-                IN GURGAON • VAPESHOPSGURUGRAM.COM
-              </span>
+              <div className="flex flex-col">
+                <div className="flex items-center text-2xl font-black tracking-tight leading-none">
+                  <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-indigo-300 to-pink-400">
+                    Vape
+                  </span>
+                  <span className="text-white font-extrabold">Store</span>
+                </div>
+                <span className="text-[9px] font-bold text-purple-400/90 tracking-[0.25em] uppercase mt-1">
+                  IN GURGAON • VAPESTOREGURUGRAM.COM
+                </span>
+              </div>
             </Link>
 
             <p className="text-slate-400 text-xs sm:text-sm leading-relaxed max-w-md">
-              Gurugram, Delhi &amp; Noida&apos;s premier online vape store delivering 100% authentic disposable vapes, refillable pod kits, coils, and imported nic salts. 30–60 min courier in Gurugram, and same-day express delivery across Delhi &amp; Noida NCR with Cash on Delivery (COD) &amp; UPI.
+              Gurgaon, Delhi &amp; Noida&apos;s premier online vape store delivering 100% authentic disposable vapes, refillable pod kits, coils, and imported nic salts. 30–60 min courier in Gurgaon, and same-day express delivery across Delhi &amp; Noida NCR with Cash on Delivery (COD) &amp; UPI.
             </p>
 
             {/* Quick WhatsApp / Call Contact Pill */}
             <div className="pt-2 flex flex-wrap gap-2.5">
               <a
                 href={`https://wa.me/${STORE_INFO.whatsappNumber}?text=${encodeURIComponent(
-                  "Hi VapeShop Gurugram! I want to order."
+                  "Hi Vape Store Gurgaon! I want to order."
                 )}`}
                 target="_blank"
                 rel="noopener noreferrer"

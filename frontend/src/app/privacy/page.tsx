@@ -7,7 +7,10 @@ import { STORE_INFO } from "@/data/products";
 export const metadata: Metadata = {
   title: "Privacy Policy | " + STORE_INFO.name,
   description:
-    "Privacy Policy and customer data protection information for Vapeshopsgurugram. Safe, encrypted, and discreet ordering.",
+    "Privacy Policy and customer data protection information for " + STORE_INFO.name + ". Safe, encrypted, and discreet ordering.",
+  alternates: {
+    canonical: "/privacy",
+  },
 };
 
 export default function PrivacyPage() {
@@ -40,11 +43,11 @@ export default function PrivacyPage() {
           <div className="space-y-4 text-xs sm:text-sm text-slate-600 leading-relaxed">
             <h2 className="text-base font-bold text-slate-900">1. Information We Collect</h2>
             <p>
-              When placing an order or inquiry via our website or direct WhatsApp, we collect only the necessary details required to complete your express delivery in Gurugram, such as:
+              When placing an order or inquiry via our website or direct WhatsApp, we collect only the necessary details required to complete your express delivery in Gurgaon, such as:
             </p>
             <ul className="list-disc pl-5 space-y-1">
               <li>Recipient name and contact phone number.</li>
-              <li>Delivery address, sector, landmark, or PIN code in Gurugram / Delhi NCR.</li>
+              <li>Delivery address, sector, landmark, or PIN code in Gurgaon / Delhi NCR.</li>
               <li>Order specifics (device models, flavor choices, quantity).</li>
             </ul>
 

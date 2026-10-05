@@ -9,22 +9,25 @@ import { STORE_INFO } from "@/data/products";
 const SLIDES = [
   {
     id: 1,
-    image: "/banners/hero-banner.png",
+    image: "/banners/vapestoregurgaon banner.png",
+    mobileImage: "/banners/vapestoregurgaon mobile banner.png",
     alt: "Premium Vapes in Gurgaon - Buy Authentic Vapes, Pods & E-Liquids Online",
     title: "Premium Vapes in Gurgaon",
     subtitle: "Fast Delivery in Delhi, Gurgaon, and NCR",
   },
   {
     id: 2,
-    image: "/banners/hero-banner.png",
-    alt: "Same Day 30-60 Min Express Delivery Across Gurugram & Delhi NCR",
+    image: "/banners/vapestoregurgaon banner 2.png",
+    mobileImage: "/banners/vapestoregurgaon mobile banner 2.png",
+    alt: "Same Day 30-60 Min Express Delivery Across Gurgaon & Delhi NCR",
     title: "Express 30-60 Min Delivery",
     subtitle: "100% Genuine Scratch Code Verified Products",
   },
   {
     id: 3,
-    image: "/banners/hero-banner.png",
-    alt: "Vapeshopsgurugram - Best Prices & Wide Range in Gurgaon",
+    image: "/banners/vapestoregurgaon banner 3.png",
+    mobileImage: "/banners/vapestoregurgaon mobile banner 3.png",
+    alt: "Vape Store Gurgaon - Best Prices & Wide Range in Gurgaon",
     title: "Wide Range of Pods & Liquids",
     subtitle: "Doorstep Cash on Delivery & UPI Accepted",
   },
@@ -77,8 +80,8 @@ export default function HeroSlider() {
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}
     >
-      {/* 100% Full Display Screen Width Edge-to-Edge Banner Container */}
-      <div className="relative w-full aspect-[2.49/1] min-h-[260px] sm:min-h-[380px] md:min-h-[460px] lg:min-h-[540px] xl:min-h-[620px] overflow-hidden bg-slate-950">
+      {/* 100% Full Display Screen Width Edge-to-Edge Banner Container (Mobile & Desktop Responsive - Adapt to Image) */}
+      <div className="relative w-full aspect-[1098/1432] sm:aspect-[1953/805] overflow-hidden bg-slate-950">
         {/* Slides */}
         {SLIDES.map((slide, index) => {
           const isActive = currentSlide === index;
@@ -89,6 +92,7 @@ export default function HeroSlider() {
                 isActive ? "opacity-100 z-10" : "opacity-0 z-0 pointer-events-none"
               }`}
             >
+              {/* Desktop Banner (Hidden on Mobile) */}
               <Image
                 src={slide.image}
                 alt={slide.alt}
@@ -96,9 +100,25 @@ export default function HeroSlider() {
                 priority={index === 0}
                 quality={100}
                 unoptimized
-                className="object-cover object-center w-full h-full select-none"
+                className={`object-cover object-center w-full h-full select-none ${
+                  slide.mobileImage ? "hidden sm:block" : ""
+                }`}
                 sizes="100vw"
               />
+
+              {/* Mobile Phone Banner (Visible only on Mobile) */}
+              {slide.mobileImage && (
+                <Image
+                  src={slide.mobileImage}
+                  alt={slide.alt}
+                  fill
+                  priority={index === 0}
+                  quality={100}
+                  unoptimized
+                  className="object-cover object-center w-full h-full select-none block sm:hidden"
+                  sizes="100vw"
+                />
+              )}
             </div>
           );
         })}
@@ -191,7 +211,7 @@ export default function HeroSlider() {
           {/* 3. WhatsApp Quick Order with Live Pulse */}
           <a
             href={`https://wa.me/${STORE_INFO.whatsappNumber}?text=${encodeURIComponent(
-              "Hi VapeShop in Gurgaon! I want to place a quick order."
+              "Hi Vape Store Gurgaon! I want to place a quick order."
             )}`}
             target="_blank"
             rel="noopener noreferrer"

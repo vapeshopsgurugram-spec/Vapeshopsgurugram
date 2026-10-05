@@ -42,7 +42,7 @@ export default function CartDrawer() {
       itemsList += `${index + 1}. *${item.name}* (${item.brand})\n   Flavor: ${item.flavor} | Qty: ${item.quantity} | ₹${(item.price * item.quantity).toLocaleString("en-IN")}\n`;
     });
 
-    const message = `*VAPESHOPSGURUGRAM - NEW ORDER*\n━━━━━━━━━━━━━━━━━━━━\n📦 *Items Ordered:*\n${itemsList}━━━━━━━━━━━━━━━━━━━━\n💰 *Subtotal:* ₹${subtotal.toLocaleString("en-IN")}\n🚚 *Delivery:* ${isFreeDelivery ? "FREE (30-60 Min Express)" : `₹${deliveryFee}`}\n💵 *Total Amount:* ₹${grandTotal.toLocaleString("en-IN")}\n━━━━━━━━━━━━━━━━━━━━\nPlease confirm my order and share delivery ETA for Gurugram / Delhi NCR.`;
+    const message = `*VAPESHOPSGurgaon - NEW ORDER*\n━━━━━━━━━━━━━━━━━━━━\n📦 *Items Ordered:*\n${itemsList}━━━━━━━━━━━━━━━━━━━━\n💰 *Subtotal:* ₹${subtotal.toLocaleString("en-IN")}\n🚚 *Delivery:* ${isFreeDelivery ? "FREE (30-60 Min Express)" : `₹${deliveryFee}`}\n💵 *Total Amount:* ₹${grandTotal.toLocaleString("en-IN")}\n━━━━━━━━━━━━━━━━━━━━\nPlease confirm my order and share delivery ETA for Gurgaon / Delhi NCR.`;
 
     const url = `https://wa.me/${STORE_INFO.whatsappNumber}?text=${encodeURIComponent(
       message
@@ -75,7 +75,7 @@ export default function CartDrawer() {
                   </span>
                 </div>
                 <p className="text-[11px] text-slate-500 font-medium">
-                  Gurugram & Delhi NCR Express Delivery
+                  Gurgaon & Delhi NCR Express Delivery
                 </p>
               </div>
             </div>
@@ -111,7 +111,7 @@ export default function CartDrawer() {
                 <div className="space-y-1">
                   <h3 className="text-base font-bold text-slate-900">Your cart is empty</h3>
                   <p className="text-xs text-slate-500 max-w-xs">
-                    Explore our authentic vape pods, disposables, and juices in Gurugram!
+                    Explore our authentic vape pods, disposables, and juices in Gurgaon!
                   </p>
                 </div>
                 <button
@@ -136,7 +136,7 @@ export default function CartDrawer() {
                         {item.image ? (
                           <Image
                             src={item.image}
-                            alt={item.name}
+                            alt={`${item.name} | Vape Store Gurgaon`}
                             fill
                             className="object-cover"
                           />

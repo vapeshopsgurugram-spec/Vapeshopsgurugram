@@ -7,7 +7,7 @@ const {
   PRODUCTS,
   CATEGORIES,
   STORE_INFO,
-  GURUGRAM_LOCATIONS,
+  Gurgaon_LOCATIONS,
 } = require(path.join(__dirname, "../../data/products.js"));
 
 // GET all products with filtering
@@ -72,7 +72,7 @@ router.get("/meta/categories", (req, res) => {
 router.get("/meta/locations", (req, res) => {
   res.json({
     success: true,
-    data: GURUGRAM_LOCATIONS,
+    data: Gurgaon_LOCATIONS,
   });
 });
 

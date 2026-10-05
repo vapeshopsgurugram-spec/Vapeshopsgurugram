@@ -5,7 +5,7 @@ import { STORE_INFO } from "@/data/products";
 
 export default function WhatsAppFloatingButton() {
   const url = `https://wa.me/${STORE_INFO.whatsappNumber}?text=${encodeURIComponent(
-    "Hi Vapeshopsgurugram! I want to inquire about vape delivery in Gurugram / Delhi NCR."
+    "Hi Vape Store Gurgaon! I want to inquire about vape delivery in Gurgaon / Delhi NCR."
   )}`;
 
   return (
@@ -14,7 +14,7 @@ export default function WhatsAppFloatingButton() {
         href={url}
         target="_blank"
         rel="noopener noreferrer"
-        aria-label="Chat with Vapeshopsgurugram on WhatsApp"
+        aria-label="Chat with Vape Store Gurgaon on WhatsApp"
         className="group flex items-center gap-2 px-4 py-3 rounded-full bg-[#25D366] hover:bg-[#20ba59] text-white font-bold text-xs sm:text-sm shadow-xl shadow-emerald-600/30 transition-all hover:scale-105 active:scale-95"
       >
         <span className="relative flex h-3 w-3 shrink-0">

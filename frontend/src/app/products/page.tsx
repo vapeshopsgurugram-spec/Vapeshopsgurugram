@@ -6,14 +6,62 @@ import { PRODUCTS, CATEGORIES, STORE_INFO } from "@/data/products";
 import ProductCard from "@/components/ProductCard";
 
 export const metadata: Metadata = {
-  title: "All Vape Products & Kits | " + STORE_INFO.name,
+  title: "All Vape Devices, Pods & E-Liquids | Buy Online in Gurgaon",
   description:
-    "Explore our complete range of authentic disposable vapes, refillable pod kits, nicotine salts, and accessories in Gurugram.",
+    "Explore our complete range of 100% authentic disposable vapes, refillable pod kits, nicotine salts & coils in Gurgaon. 30-60 min express delivery with Cash on Delivery (COD).",
+  keywords: [
+    "All Vape Products Gurgaon",
+    "Buy Vapes Online Gurugram",
+    "Disposable Vapes Gurgaon",
+    "Pod Systems Delhi NCR",
+    "Vape Delivery Gurgaon 30 mins",
+    "Yuoto Thanos Gurgaon",
+    "Elf Bar Gurgaon",
+    "Lost Mary Delhi NCR",
+    "IGET Moon Gurgaon",
+    "Uwell Caliburn Pods",
+    "Nicotine Salts 50mg Gurgaon",
+    "Cash on Delivery Vapes Gurgaon",
+    "Vape Store Near Me Gurgaon",
+  ],
+  alternates: {
+    canonical: "/products",
+  },
+  openGraph: {
+    title: "All Vape Products & Kits | Vape Store Gurgaon",
+    description: "Browse 100% genuine vapes, pods & liquids with superfast 30-60 min delivery across Gurgaon.",
+    url: "https://vapestoregurugram.com/products",
+    siteName: "Vape Store Gurgaon",
+    type: "website",
+  },
 };
 
 export default function ProductsPage() {
+  const breadcrumbSchema = {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      {
+        "@type": "ListItem",
+        position: 1,
+        name: "Home",
+        item: "https://vapestoregurugram.com",
+      },
+      {
+        "@type": "ListItem",
+        position: 2,
+        name: "Products",
+        item: "https://vapestoregurugram.com/products",
+      },
+    ],
+  };
+
   return (
     <main className="min-h-screen bg-slate-50/60 pb-20 pt-24 sm:pt-28">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
+      />
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-8">
         {/* Breadcrumb */}
         <nav className="flex items-center gap-2 text-xs sm:text-sm text-slate-500 py-1">
@@ -34,7 +82,7 @@ export default function ProductsPage() {
               All Vape Devices &amp; Disposables
             </h1>
             <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              Instant 30-60 minute doorstep delivery across all sectors of Gurugram.
+              Instant 30-60 minute doorstep delivery across all sectors of Gurgaon.
             </p>
           </div>
 

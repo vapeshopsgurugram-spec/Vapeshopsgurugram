@@ -7,7 +7,10 @@ import { STORE_INFO } from "@/data/products";
 export const metadata: Metadata = {
   title: "Terms of Service | " + STORE_INFO.name,
   description:
-    "Terms of service, age compliance, and delivery conditions for Vapeshopsgurugram. Serving Gurugram with 100% genuine products.",
+    "Terms of service, age compliance, and delivery conditions for " + STORE_INFO.name + ". Serving Gurgaon with 100% genuine products.",
+  alternates: {
+    canonical: "/terms",
+  },
 };
 
 export default function TermsPage() {
@@ -50,7 +53,7 @@ export default function TermsPage() {
               {STORE_INFO.name} only sells 100% authentic, brand-new, factory-sealed products from recognized manufacturers. All devices feature anti-counterfeit scratch codes verifiable on the manufacturer&apos;s official website.
             </p>
 
-            <h2 className="text-base font-bold text-slate-900 pt-3">2. Gurugram Same-Day Express Delivery</h2>
+            <h2 className="text-base font-bold text-slate-900 pt-3">2. Gurgaon Same-Day Express Delivery</h2>
             <p>
               Doorstep delivery across DLF, Cyber City, Golf Course Road, Sohna Road, and neighboring sectors is dispatched immediately upon order confirmation. Delivery ETAs range from 30 to 60 minutes subject to weather and traffic conditions.
             </p>

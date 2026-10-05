@@ -6,6 +6,7 @@ export interface Feature {
 export interface Product {
   id: string;
   slug: string;
+  aliasSlugs?: string[];
   name: string;
   subtitle?: string;
   storeLocation?: string;

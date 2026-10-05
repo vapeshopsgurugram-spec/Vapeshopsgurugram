@@ -17,7 +17,7 @@ app.use("/api/products", productsRouter);
 app.get("/api/health", (req, res) => {
   res.json({
     status: "ok",
-    service: "VapeShops Gurugram Backend API",
+    service: "VapeShops Gurgaon Backend API",
     timestamp: new Date().toISOString(),
   });
 });
