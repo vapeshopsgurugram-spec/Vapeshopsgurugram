@@ -46,7 +46,7 @@ export async function generateMetadata({
       description: product.description,
       images: [
         {
-          url: product.image || "/products/elfbar-gh23000-bluerazz.jpg",
+          url: product.image || "/products/elfbar-gh23000-bluerazz.webp",
           alt: `${product.name} | Vape Store Gurgaon`,
         },
       ],
@@ -71,7 +71,7 @@ export default async function ProductDetailPage({
 
   const absoluteImageUrl = product.image?.startsWith("http")
     ? product.image
-    : `https://vapestoregurugram.com${product.image || "/products/elfbar-gh23000-bluerazz.jpg"}`;
+    : `https://vapestoregurugram.com${product.image || "/products/elfbar-gh23000-bluerazz.webp"}`;
 
   // Schema.org JSON-LD for Google Rich Results
   const productSchema = {

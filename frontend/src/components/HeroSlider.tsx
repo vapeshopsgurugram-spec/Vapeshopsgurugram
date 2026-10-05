@@ -9,24 +9,24 @@ import { STORE_INFO } from "@/data/products";
 const SLIDES = [
   {
     id: 1,
-    image: "/banners/vapestoregurgaon banner.png",
-    mobileImage: "/banners/vapestoregurgaon mobile banner.png",
+    image: "/banners/vapestoregurgaon banner.webp",
+    mobileImage: "/banners/vapestoregurgaon mobile banner.webp",
     alt: "Premium Vapes in Gurgaon - Buy Authentic Vapes, Pods & E-Liquids Online",
     title: "Premium Vapes in Gurgaon",
     subtitle: "Fast Delivery in Delhi, Gurgaon, and NCR",
   },
   {
     id: 2,
-    image: "/banners/vapestoregurgaon banner 2.png",
-    mobileImage: "/banners/vapestoregurgaon mobile banner 2.png",
+    image: "/banners/vapestoregurgaon banner 2.webp",
+    mobileImage: "/banners/vapestoregurgaon mobile banner 2.webp",
     alt: "Same Day 30-60 Min Express Delivery Across Gurgaon & Delhi NCR",
     title: "Express 30-60 Min Delivery",
     subtitle: "100% Genuine Scratch Code Verified Products",
   },
   {
     id: 3,
-    image: "/banners/vapestoregurgaon banner 3.png",
-    mobileImage: "/banners/vapestoregurgaon mobile banner 3.png",
+    image: "/banners/vapestoregurgaon banner 3.webp",
+    mobileImage: "/banners/vapestoregurgaon mobile banner 3.webp",
     alt: "Vape Store Gurgaon - Best Prices & Wide Range in Gurgaon",
     title: "Wide Range of Pods & Liquids",
     subtitle: "Doorstep Cash on Delivery & UPI Accepted",
@@ -98,8 +98,7 @@ export default function HeroSlider() {
                 alt={slide.alt}
                 fill
                 priority={index === 0}
-                quality={100}
-                unoptimized
+                quality={85}
                 className={`object-cover object-center w-full h-full select-none ${
                   slide.mobileImage ? "hidden sm:block" : ""
                 }`}
@@ -113,8 +112,7 @@ export default function HeroSlider() {
                   alt={slide.alt}
                   fill
                   priority={index === 0}
-                  quality={100}
-                  unoptimized
+                  quality={85}
                   className="object-cover object-center w-full h-full select-none block sm:hidden"
                   sizes="100vw"
                 />

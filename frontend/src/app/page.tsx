@@ -77,7 +77,7 @@ export default function HomePage() {
       url: `https://vapestoregurugram.com/product/${prod.slug}`,
       image: prod.image?.startsWith("http")
         ? prod.image
-        : `https://vapestoregurugram.com${prod.image || "/products/elfbar-gh23000-bluerazz.jpg"}`,
+        : `https://vapestoregurugram.com${prod.image || "/products/elfbar-gh23000-bluerazz.webp"}`,
     })),
   };
 

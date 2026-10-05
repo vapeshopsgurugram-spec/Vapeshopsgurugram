@@ -109,7 +109,7 @@ export default function ProductDetailClient({
           <div className="w-full max-w-[520px] mx-auto lg:mx-0">
             <div className="relative rounded-3xl overflow-hidden bg-[#faf7f2] border border-slate-200/90 shadow-[0_8px_30px_rgb(0,0,0,0.06)] aspect-square flex items-center justify-center group">
               <Image
-                src={product.image || "/products/elfbar-gh23000-bluerazz.jpg"}
+                src={product.image || "/products/elfbar-gh23000-bluerazz.webp"}
                 alt={`${product.name} | Vape Store Gurgaon`}
                 fill
                 priority
