@@ -49,10 +49,24 @@ export default function ProductDetailClient({
     setTimeout(() => setAddedAnimation(false), 2000);
   };
 
+  const productUrl = `https://vapestoregurugram.com/product/${product.slug}`;
   const whatsappMessage = encodeURIComponent(
-    `Hi ${STORE_INFO.name}, I would like to order:\n\n*${product.name}*\n- Quantity: ${quantity}\n- Total Price: ₹${(
-      product.price * quantity
-    ).toLocaleString("en-IN")}\n\nPlease deliver to my location in Gurgaon / Delhi NCR.`
+    `*NEW ORDER - VAPE STORE GURGAON*\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `📦 *Product:* ${product.name}\n` +
+    `🏷️ *Brand:* ${product.brand || "Authentic"}\n` +
+    (product.flavors && product.flavors.length > 0 ? `🍇 *Flavor Selected:* ${product.flavors[0]}\n` : ``) +
+    `🔢 *Quantity:* ${quantity}\n` +
+    `💰 *Total Amount:* ₹${(product.price * quantity).toLocaleString("en-IN")}\n` +
+    `💵 *Payment Mode:* Cash on Delivery (COD) / UPI on Delivery\n` +
+    `━━━━━━━━━━━━━━━━━━━━\n` +
+    `🔗 *Product Link:* ${productUrl}\n\n` +
+    `📍 *Delivery Details:*\n` +
+    `• Name:\n` +
+    `• Delivery Address:\n` +
+    `• Sector / Area in Gurgaon:\n` +
+    `• Phone Number:\n\n` +
+    `⚡ Please deliver in 30-60 mins across Gurgaon / Delhi NCR.`
   );
 
   // Other related products

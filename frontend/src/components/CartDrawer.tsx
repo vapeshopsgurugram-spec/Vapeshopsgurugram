@@ -39,10 +39,25 @@ export default function CartDrawer() {
 
     let itemsList = "";
     cart.forEach((item, index) => {
-      itemsList += `${index + 1}. *${item.name}* (${item.brand})\n   Flavor: ${item.flavor} | Qty: ${item.quantity} | ₹${(item.price * item.quantity).toLocaleString("en-IN")}\n`;
+      itemsList += `${index + 1}. *${item.name}*\n   Flavor: ${item.flavor || "Default"} | Qty: ${item.quantity} | ₹${(item.price * item.quantity).toLocaleString("en-IN")}\n   Link: https://vapestoregurugram.com/product/${item.slug}\n\n`;
     });
 
-    const message = `*VAPESHOPSGurgaon - NEW ORDER*\n━━━━━━━━━━━━━━━━━━━━\n📦 *Items Ordered:*\n${itemsList}━━━━━━━━━━━━━━━━━━━━\n💰 *Subtotal:* ₹${subtotal.toLocaleString("en-IN")}\n🚚 *Delivery:* ${isFreeDelivery ? "FREE (30-60 Min Express)" : `₹${deliveryFee}`}\n💵 *Total Amount:* ₹${grandTotal.toLocaleString("en-IN")}\n━━━━━━━━━━━━━━━━━━━━\nPlease confirm my order and share delivery ETA for Gurgaon / Delhi NCR.`;
+    const message =
+      `*NEW CART ORDER - VAPE STORE GURGAON*\n` +
+      `━━━━━━━━━━━━━━━━━━━━\n` +
+      `📦 *Items Ordered:*\n\n${itemsList}` +
+      `━━━━━━━━━━━━━━━━━━━━\n` +
+      `💰 *Subtotal:* ₹${subtotal.toLocaleString("en-IN")}\n` +
+      `🚚 *Delivery:* ${isFreeDelivery ? "FREE (30-60 Min Express)" : `₹${deliveryFee}`}\n` +
+      `💵 *Grand Total:* ₹${grandTotal.toLocaleString("en-IN")}\n` +
+      `💳 *Payment:* Cash on Delivery (COD) / UPI on Delivery\n` +
+      `━━━━━━━━━━━━━━━━━━━━\n` +
+      `📍 *Customer Delivery Details:*\n` +
+      `• Name:\n` +
+      `• Delivery Address:\n` +
+      `• Sector / Area in Gurgaon/Delhi NCR:\n` +
+      `• Phone Number:\n\n` +
+      `⚡ Please dispatch order for express 30-60 min delivery!`;
 
     const url = `https://wa.me/${STORE_INFO.whatsappNumber}?text=${encodeURIComponent(
       message
