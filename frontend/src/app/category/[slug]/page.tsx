@@ -232,6 +232,32 @@ export default async function CategoryPage({
             <ProductCard key={prod.id} product={prod} />
           ))}
         </div>
+
+        {/* Category SEO Content & Local Trust Signals */}
+        <section className="rounded-2xl sm:rounded-3xl bg-white border border-slate-200/90 p-6 sm:p-8 space-y-4 shadow-xs mt-8">
+          <h2 className="text-lg sm:text-xl font-bold text-slate-900 tracking-tight">
+            Authentic {currentCat.name} in Gurgaon – 30-60 Min Express Delivery
+          </h2>
+          <div className="text-xs sm:text-sm text-slate-600 leading-relaxed space-y-3">
+            <p>
+              Shop 100% factory-sealed, verified <strong>{currentCat.name}</strong> with anti-counterfeit QR security codes.
+              Enjoy guaranteed 30–60 minute instant doorstep courier across <strong>DLF Cyber City</strong>,
+              <strong>Golf Course Road</strong>, <strong>DLF Phase 1-5</strong>, <strong>Sohna Road</strong>, and
+              same-day express delivery across <strong>Delhi</strong> and <strong>Noida NCR</strong> with Cash on Delivery (COD) and UPI.
+            </p>
+            <div className="flex flex-wrap gap-2 pt-1 text-xs">
+              <span className="px-3 py-1 rounded-lg bg-purple-50 text-purple-700 font-bold border border-purple-200">
+                ⚡ 30-60 Min Delivery
+              </span>
+              <span className="px-3 py-1 rounded-lg bg-emerald-50 text-emerald-700 font-bold border border-emerald-200">
+                🛡️ 100% Genuine Sealed Stock
+              </span>
+              <span className="px-3 py-1 rounded-lg bg-slate-100 text-slate-700 font-bold border border-slate-200">
+                💵 Cash on Delivery (COD) &amp; UPI
+              </span>
+            </div>
+          </div>
+        </section>
       </div>
     </main>
   );

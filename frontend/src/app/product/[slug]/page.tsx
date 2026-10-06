@@ -114,6 +114,47 @@ export default async function ProductDetailPage({
     },
   };
 
+  const productFaqs = [
+    {
+      q: `Is ${product.name} 100% authentic and original?`,
+      a: `Yes, every ${product.name} sold at Vape Store Gurgaon comes in factory-sealed packaging with a verifiable anti-counterfeit scratch-off security QR code. You can verify it directly on the manufacturer's official security portal.`,
+    },
+    {
+      q: `How fast is delivery for ${product.name} in Gurgaon & Delhi NCR?`,
+      a: `We provide instant 30 to 60-minute express doorstep delivery across all sectors of Gurgaon (DLF Phase 1-5, Cyber City, Golf Course Road, Sohna Road), as well as same-day express delivery across South Delhi, Central Delhi, and Noida with Cash on Delivery (COD) and UPI.`,
+    },
+    {
+      q: `Can I order ${product.name} with Cash on Delivery (COD)?`,
+      a: `Yes! We accept Cash on Delivery (COD) as well as doorstep UPI (Google Pay, PhonePe, Paytm) across all locations in Gurgaon and Delhi NCR.`,
+    },
+    ...(product.puffs
+      ? [
+          {
+            q: `How long will ${product.puffs.toLocaleString()} puffs last?`,
+            a: `${product.puffs.toLocaleString()} puffs typically lasts between 2 to 4 weeks depending on personal vaping frequency. The rechargeable Type-C battery ensures you get every last drop of e-liquid.`,
+          },
+        ]
+      : [
+          {
+            q: `How do I maintain and care for ${product.name}?`,
+            a: `Keep the device charged with a standard 5V/1A USB Type-C adapter, avoid chain-vaping when the pod liquid is low, and store it in a cool, dry place away from direct sunlight.`,
+          },
+        ]),
+  ];
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: productFaqs.map((item) => ({
+      "@type": "Question",
+      name: item.q,
+      acceptedAnswer: {
+        "@type": "Answer",
+        text: item.a,
+      },
+    })),
+  };
+
   const breadcrumbSchema = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
@@ -149,7 +190,11 @@ export default async function ProductDetailPage({
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(breadcrumbSchema) }}
       />
-      <ProductDetailClient product={product} />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+      <ProductDetailClient product={product} faqs={productFaqs} />
     </>
   );
 }
