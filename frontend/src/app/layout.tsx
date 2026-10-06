@@ -7,6 +7,7 @@ import WhatsAppFloatingButton from "@/components/WhatsAppFloatingButton";
 import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://vapestoregurugram.com"),
   title: {
     default: "Vape Store Gurgaon | Buy Vapes Online | 30-60 Min Express Delivery Delhi NCR",
     template: "%s | Vape Store Gurgaon",
