@@ -46,7 +46,7 @@ export async function generateMetadata({
       description: product.description,
       images: [
         {
-          url: product.image || "/products/elfbar-gh23000-bluerazz.webp",
+          url: product.image || "/products/ebcreate-bc5000-disposable-pod-device.webp",
           alt: `${product.name} | Vape Store Gurgaon`,
         },
       ],
@@ -71,7 +71,7 @@ export default async function ProductDetailPage({
 
   const absoluteImageUrl = product.image?.startsWith("http")
     ? product.image
-    : `https://vapestoregurugram.com${product.image || "/products/elfbar-gh23000-bluerazz.webp"}`;
+    : `https://vapestoregurugram.com${product.image || "/products/ebcreate-bc5000-disposable-pod-device.webp"}`;
 
   // Schema.org JSON-LD for Google Rich Results
   const productSchema = {
