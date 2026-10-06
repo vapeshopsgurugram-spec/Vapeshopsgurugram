@@ -10,8 +10,11 @@ import {
   ChevronRight,
   Flame,
   HelpCircle,
+  Sparkles,
+  ArrowRight,
 } from "lucide-react";
 import { CATEGORIES, PRODUCTS, STORE_INFO } from "@/data/products";
+import { BLOG_POSTS } from "@/data/blogs";
 import ProductCard from "@/components/ProductCard";
 import HeroSlider from "@/components/HeroSlider";
 
@@ -331,6 +334,60 @@ export default function HomePage() {
                 </Link>
               ))}
             </div>
+          </div>
+        </section>
+
+        {/* 4.5 Vape Guides, Articles & Local Insights */}
+        <section className="space-y-6 pt-2">
+          <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-3">
+            <div>
+              <span className="text-xs font-bold text-purple-600 uppercase tracking-wider flex items-center gap-1.5">
+                <Sparkles className="w-3.5 h-3.5" /> Buyer Education &amp; Guides
+              </span>
+              <h2 className="text-2xl sm:text-3xl font-black text-slate-900 tracking-tight">
+                Vape Guides &amp; Insights
+              </h2>
+              <p className="text-xs sm:text-sm text-slate-500 mt-0.5">
+                Authenticity checks, puff comparisons, and express delivery details for Gurgaon &amp; Delhi NCR.
+              </p>
+            </div>
+            <Link
+              href="/blog"
+              className="inline-flex items-center gap-1 text-xs sm:text-sm font-bold text-purple-600 hover:text-purple-700 hover:translate-x-1 transition-all"
+            >
+              <span>View All Guides</span>
+              <ChevronRight className="w-4 h-4" />
+            </Link>
+          </div>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {BLOG_POSTS.map((post) => (
+              <article
+                key={post.id}
+                className="group p-5 rounded-2xl sm:rounded-3xl bg-white border border-slate-200/90 shadow-2xs hover:shadow-md hover:border-purple-300 transition-all duration-300 flex flex-col justify-between"
+              >
+                <div className="space-y-3">
+                  <div className="flex items-center justify-between gap-1 text-[11px]">
+                    <span className="px-2.5 py-0.5 rounded-full font-extrabold bg-purple-50 text-purple-700 border border-purple-200/80">
+                      {post.badge}
+                    </span>
+                    <span className="text-slate-400 font-medium">{post.readTime}</span>
+                  </div>
+                  <h3 className="text-sm font-bold text-slate-900 group-hover:text-purple-600 transition-colors line-clamp-2 leading-snug">
+                    <Link href={`/blog/${post.slug}`}>
+                      {post.title}
+                    </Link>
+                  </h3>
+                  <p className="text-xs text-slate-500 line-clamp-3 leading-relaxed">
+                    {post.excerpt}
+                  </p>
+                </div>
+                <div className="pt-4 mt-3 border-t border-slate-100 flex items-center justify-between text-xs font-bold text-purple-600">
+                  <span>Read Guide</span>
+                  <ArrowRight className="w-3.5 h-3.5 group-hover:translate-x-1 transition-transform" />
+                </div>
+              </article>
+            ))}
           </div>
         </section>
 

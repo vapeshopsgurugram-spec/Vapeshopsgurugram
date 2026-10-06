@@ -193,6 +193,14 @@ export default function Footer() {
                   <ArrowRight className="h-3 w-3" />
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/blog"
+                  className="text-slate-400 hover:text-purple-400 transition-colors inline-flex items-center gap-1 pt-0.5"
+                >
+                  <span>Vape Guides &amp; Blog</span>
+                </Link>
+              </li>
             </ul>
           </div>
 
