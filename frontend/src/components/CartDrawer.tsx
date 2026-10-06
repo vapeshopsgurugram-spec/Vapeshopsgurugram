@@ -39,7 +39,8 @@ export default function CartDrawer() {
 
     let itemsList = "";
     cart.forEach((item, index) => {
-      itemsList += `${index + 1}. *${item.name}*\n   Flavor: ${item.flavor || "Default"} | Qty: ${item.quantity} | ₹${(item.price * item.quantity).toLocaleString("en-IN")}\n   Link: https://vapestoregurugram.com/product/${item.slug}\n\n`;
+      const productSlug = item.slug || item.id;
+      itemsList += `${index + 1}. *${item.name}*\n   Flavor: ${item.flavor || "Default"} | Qty: ${item.quantity} | ₹${(item.price * item.quantity).toLocaleString("en-IN")}\n   Link: https://vapestoregurugram.com/product/${productSlug}\n\n`;
     });
 
     const message =

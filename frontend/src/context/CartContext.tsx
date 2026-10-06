@@ -6,6 +6,7 @@ import { Product } from "@/types/product";
 
 export interface CartItem {
   id: string;
+  slug?: string;
   name: string;
   brand: string;
   price: number;
@@ -48,6 +49,7 @@ export function CartProvider({ children }: { children: React.ReactNode }) {
         ...prev,
         {
           id: product.id,
+          slug: product.slug,
           name: product.name,
           brand: product.brand,
           price: product.price,
