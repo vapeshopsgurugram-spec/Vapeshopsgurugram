@@ -8,11 +8,11 @@ import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
   title: {
-    default: "Vape Store Gurgaon | Buy Vapes Online | 30-60 Min Express Delivery Delhi NCR",
-    template: "%s | Vape Store Gurgaon",
+    default: "Vape Shop In Gurgaon | 30-60 Min Express Delivery Delhi NCR",
+    template: "%s | Vape Shop In Gurgaon",
   },
   description:
-    "Buy 100% authentic disposable vapes, pod kits, coils & imported nic salts in Gurgaon, Delhi & Noida NCR. Superfast 30-60 min express delivery in Gurgaon, same-day delivery in Delhi & Noida. Cash on Delivery (COD) & UPI available. WhatsApp: +91 89509 53934.",
+    "Looking for a trusted vape shop in Gurgaon? Shop authentic disposable vapes, pod kits & imported e-liquids with 30-60 min express delivery & COD in Gurgaon.",
   keywords: [
     // 1. Gurgaon & Gurugram Core Commercial Keywords
     "Vape Store Gurgaon",
@@ -300,11 +300,11 @@ export const metadata: Metadata = {
     "ICBM": "28.4682, 77.0822",
   },
   openGraph: {
-    title: "Vape Store Gurgaon | Buy Vapes Online | 30-60 Min Express Delivery",
+    title: "Vape Shop In Gurgaon | 30-60 Min Express Delivery Delhi NCR",
     description:
-      "Buy 100% authentic disposable vapes, pod kits & imported nic salts in Gurgaon & Delhi NCR. Superfast 30-60 min express delivery with Cash on Delivery (COD) & UPI.",
+      "Looking for a trusted vape shop in Gurgaon? Shop authentic disposable vapes, pod kits & imported e-liquids with 30-60 min express delivery & COD in Gurgaon.",
     url: "https://vapestoregurugram.com",
-    siteName: "Vape Store Gurgaon",
+    siteName: "Vape Shop In Gurgaon",
     locale: "en_IN",
     type: "website",
     images: [
@@ -318,9 +318,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vape Store Gurgaon | 30-60 Min Express Delivery",
+    title: "Vape Shop In Gurgaon | 30-60 Min Express Delivery Delhi NCR",
     description:
-      "Order 100% authentic disposable vapes & pod kits in Gurgaon & Delhi NCR. Cash on delivery available.",
+      "Looking for a trusted vape shop in Gurgaon? Shop authentic disposable vapes, pod kits & imported e-liquids with 30-60 min express delivery & COD in Gurgaon.",
     images: ["https://vapestoregurugram.com/banners/vapestoregurgaon%20banner.png"],
   },
   robots: {
