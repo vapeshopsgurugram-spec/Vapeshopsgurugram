@@ -184,22 +184,47 @@ export default async function CategoryPage({
             href="/products"
             className="hover:text-purple-600 transition-colors"
           >
-            Categories
+            All Products
           </Link>
           <ChevronRight className="w-3.5 h-3.5 text-slate-400" />
           <span className="text-slate-900 font-semibold">{currentCat.name}</span>
         </nav>
 
-        <div className="border-b border-slate-200/80 pb-6">
-          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 uppercase tracking-wider mb-1">
-            <Sparkles className="w-4 h-4" /> Category Collection
+        <div className="border-b border-slate-200/80 pb-6 space-y-4">
+          <div>
+            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 uppercase tracking-wider mb-1">
+              <Sparkles className="w-4 h-4" /> Category Collection
+            </div>
+            <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+              {currentCat.name}
+            </h1>
+            <p className="text-xs sm:text-sm text-slate-500 mt-1">
+              Fast 30-60 min doorstep delivery across all sectors of Gurgaon.
+            </p>
           </div>
-          <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
-            {currentCat.name}
-          </h1>
-          <p className="text-xs sm:text-sm text-slate-500 mt-1">
-            Fast doorstep delivery across all sectors of Gurgaon.
-          </p>
+
+          {/* Quick Category Switcher Tabs */}
+          <div className="flex items-center gap-2 overflow-x-auto pb-1 scrollbar-none">
+            <Link
+              href="/products"
+              className="shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold bg-white text-slate-700 hover:text-purple-600 hover:bg-slate-100/80 border border-slate-200 shadow-2xs transition-all"
+            >
+              All Products ({PRODUCTS.length})
+            </Link>
+            {CATEGORIES.map((cat) => (
+              <Link
+                key={cat.id}
+                href={`/category/${cat.slug}`}
+                className={`shrink-0 px-3.5 py-1.5 rounded-xl text-xs font-bold transition-all shadow-2xs ${
+                  cat.slug === currentCat.slug
+                    ? "bg-purple-600 text-white shadow-md shadow-purple-600/30 ring-2 ring-purple-600/20"
+                    : "bg-white text-slate-700 hover:text-purple-600 hover:bg-slate-100/80 border border-slate-200"
+                }`}
+              >
+                {cat.name} ({cat.count})
+              </Link>
+            ))}
+          </div>
         </div>
 
         <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">

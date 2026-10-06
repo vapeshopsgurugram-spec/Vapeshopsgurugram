@@ -20,10 +20,10 @@ const STORE_INFO = {
 };
 
 const CATEGORIES = [
-  { id: "disposables", name: "Disposable Vapes", slug: "disposable-vapes", count: 24 },
-  { id: "pod-systems", name: "Pod Systems & Kits", slug: "pod-systems", count: 18 },
-  { id: "e-liquids", name: "Nic Salts & E-Liquids", slug: "e-liquids", count: 32 },
-  { id: "coils-pods", name: "Replacement Coils & Pods", slug: "coils-pods", count: 15 },
+  { id: "disposables", name: "Disposable Vapes", slug: "disposable-vapes", count: 19 },
+  { id: "pod-systems", name: "Pod Systems & Kits", slug: "pod-systems", count: 5 },
+  { id: "e-liquids", name: "Nic Salts & E-Liquids", slug: "e-liquids", count: 2 },
+  { id: "coils-pods", name: "Replacement Coils & Pods", slug: "coils-pods", count: 1 },
 ];
 
 const PRODUCTS = [

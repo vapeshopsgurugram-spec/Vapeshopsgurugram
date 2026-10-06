@@ -2,8 +2,8 @@ import React from "react";
 import type { Metadata } from "next";
 import Link from "next/link";
 import { ChevronRight, Sparkles } from "lucide-react";
-import { PRODUCTS, CATEGORIES, STORE_INFO } from "@/data/products";
-import ProductCard from "@/components/ProductCard";
+import { PRODUCTS, CATEGORIES } from "@/data/products";
+import ProductsCatalog from "@/components/ProductsCatalog";
 
 export const metadata: Metadata = {
   title: "All Vape Devices, Pods & E-Liquids | Buy Online in Gurgaon",
@@ -73,37 +73,20 @@ export default function ProductsPage() {
         </nav>
 
         {/* Header */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-end justify-between gap-4 border-b border-slate-200/80 pb-6">
-          <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 uppercase tracking-wider mb-1">
-              <Sparkles className="w-4 h-4" /> 100% Genuine Catalog
-            </div>
-            <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
-              All Vape Devices &amp; Disposables
-            </h1>
-            <p className="text-xs sm:text-sm text-slate-500 mt-1">
-              Instant 30-60 minute doorstep delivery across all sectors of Gurgaon.
-            </p>
+        <div className="border-b border-slate-200/80 pb-6">
+          <div className="inline-flex items-center gap-1.5 text-xs font-bold text-purple-600 uppercase tracking-wider mb-2">
+            <Sparkles className="w-4 h-4" /> 100% Genuine Catalog
           </div>
-
-          <div className="flex flex-wrap gap-2">
-            {CATEGORIES.map((cat) => (
-              <span
-                key={cat.id}
-                className="px-3 py-1 rounded-xl bg-white border border-slate-200 text-xs font-bold text-slate-700 shadow-2xs"
-              >
-                {cat.name} ({cat.count})
-              </span>
-            ))}
-          </div>
+          <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
+            All Vape Devices &amp; Disposables
+          </h1>
+          <p className="text-xs sm:text-sm text-slate-500 mt-1 max-w-2xl">
+            Instant 30-60 minute express doorstep delivery across DLF, Cyber City, Golf Course Road &amp; all sectors of Gurgaon.
+          </p>
         </div>
 
-        {/* Product Grid */}
-        <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-3 sm:gap-4 lg:gap-6">
-          {PRODUCTS.map((prod) => (
-            <ProductCard key={prod.id} product={prod} />
-          ))}
-        </div>
+        {/* Interactive Products Catalog (Filters, Tabs, Search, Sort & Grid) */}
+        <ProductsCatalog products={PRODUCTS} categories={CATEGORIES} />
       </div>
     </main>
   );
