@@ -34,7 +34,7 @@ const FAQS = [
   },
   {
     q: "How can I order vapes in Delhi NCR with Cash on Delivery?",
-    a: "You can easily order directly through our website cart or via WhatsApp (+91 89509 53934). We accept Cash on Delivery (COD) and doorstep UPI (Google Pay, PhonePe, Paytm) across Gurgaon, Delhi, and Noida.",
+    a: "You can easily order directly through our website cart or via WhatsApp (+91 96716 39718). We accept Cash on Delivery (COD) and doorstep UPI (Google Pay, PhonePe, Paytm) across Gurgaon, Delhi, and Noida.",
   },
   {
     q: "Are the vapes and pod kits 100% authentic?",
@@ -47,6 +47,34 @@ const FAQS = [
   {
     q: "Is discreet packaging guaranteed?",
     a: "Yes. All orders are packed in unmarked, tamper-evident protective packaging with zero product branding on the outside for complete privacy.",
+  },
+  {
+    q: "What should I know about vape shops in Gurugram?",
+    a: "When searching for a vape shop in Gurugram, it is important to understand the applicable laws in India. The Prohibition of Electronic Cigarettes Act, 2019 restricts the sale, distribution, storage and advertisement of electronic cigarettes and related devices.",
+  },
+  {
+    q: "Are electronic cigarettes legal in Gurugram?",
+    a: "Electronic cigarettes, including devices covered under India's Prohibition of Electronic Cigarettes Act, 2019, are subject to a nationwide prohibition. Consumers and businesses should refer to the applicable legislation and official government guidance.",
+  },
+  {
+    q: "What does the term “vape shop Gurugram” mean?",
+    a: "The search term “vape shop Gurugram” is commonly used by people looking for information about vaping products and related businesses in Gurugram, Haryana. Anyone researching these products should first understand the legal restrictions that apply in India.",
+  },
+  {
+    q: "What are electronic cigarettes?",
+    a: "Electronic cigarettes are devices that heat a substance, with or without nicotine or flavourings, to create an aerosol for inhalation. India's 2019 legislation covers electronic nicotine delivery systems and certain similar devices.",
+  },
+  {
+    q: "Where can I find official information about vape regulations in Gurugram?",
+    a: "For reliable information about electronic cigarette regulations in Gurugram and across India, consult the official Prohibition of Electronic Cigarettes Act, 2019, published on the India Code website.",
+  },
+  {
+    q: "What should businesses know about vaping regulations in Gurugram?",
+    a: "Businesses operating in Gurugram should review the applicable laws before publishing content, listing products or making claims relating to electronic cigarettes. The law prohibits several activities relating to these devices, including their sale, distribution, storage and advertisement.",
+  },
+  {
+    q: "Where can I read more about India's electronic cigarette law?",
+    a: "You can read the full legislation through the Government of India's India Code portal. Reviewing the original legislation is a useful starting point for understanding the restrictions applicable to electronic cigarettes and related devices.",
   },
 ];
 
@@ -392,8 +420,8 @@ export default function HomePage() {
         </section>
 
         {/* 5. Frequently Asked Questions */}
-        <section className="max-w-3xl mx-auto space-y-6">
-          <div className="text-center space-y-2">
+        <section className="max-w-5xl mx-auto space-y-5">
+          <div className="text-center space-y-1.5">
             <span className="text-xs font-bold text-purple-600 uppercase tracking-wider flex items-center justify-center gap-1">
               <HelpCircle className="h-3.5 w-3.5" /> FAQs
             </span>
@@ -402,14 +430,14 @@ export default function HomePage() {
             </h2>
           </div>
 
-          <div className="space-y-3">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-3.5">
             {FAQS.map((faq) => (
               <div
                 key={faq.q}
-                className="p-5 rounded-2xl bg-white border border-slate-100 shadow-sm space-y-2"
+                className="p-4 sm:p-4.5 rounded-2xl bg-white border border-slate-100/90 shadow-[0_2px_10px_rgba(0,0,0,0.02)] hover:border-purple-200 transition-colors flex flex-col justify-start space-y-1.5"
               >
-                <h3 className="text-sm font-bold text-slate-900">{faq.q}</h3>
-                <p className="text-xs text-slate-500 leading-relaxed">{faq.a}</p>
+                <h3 className="text-xs sm:text-sm font-bold text-slate-900 leading-snug">{faq.q}</h3>
+                <p className="text-[11px] sm:text-xs text-slate-600 leading-relaxed">{faq.a}</p>
               </div>
             ))}
           </div>

@@ -187,7 +187,7 @@ export default function HeroSlider() {
 
           {/* 2. Direct Call Support */}
           <a
-            href="tel:918950953934"
+            href={`tel:${STORE_INFO.phone}`}
             className="group relative flex items-center gap-2.5 sm:gap-3.5 p-2.5 sm:p-3.5 rounded-2xl bg-white border border-slate-200/80 shadow-[0_4px_20px_rgba(0,0,0,0.04)] hover:shadow-xl hover:border-blue-300 hover:-translate-y-0.5 transition-all duration-200"
           >
             <div className="w-9 h-9 sm:w-11 sm:h-11 rounded-xl bg-gradient-to-br from-blue-500 to-indigo-600 text-white flex items-center justify-center shrink-0 shadow-md shadow-blue-500/20 group-hover:scale-105 transition-transform">
@@ -198,7 +198,7 @@ export default function HeroSlider() {
                 24/7 Helpline
               </span>
               <span className="block text-[11px] sm:text-sm font-black text-slate-900 truncate group-hover:text-blue-600 transition-colors">
-                Call 918950953934
+                Call {STORE_INFO.phone}
               </span>
             </div>
             <div className="hidden sm:flex h-6 w-6 rounded-full bg-slate-100 group-hover:bg-blue-100 group-hover:text-blue-600 items-center justify-center text-slate-400 shrink-0 transition-colors">

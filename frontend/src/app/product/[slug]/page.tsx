@@ -92,6 +92,7 @@ export default async function ProductDetailPage({
       priceCurrency: "INR",
       price: product.price,
       priceValidUntil: "2027-12-31",
+      validFrom: "2024-01-01",
       itemCondition: "https://schema.org/NewCondition",
       availability: "https://schema.org/InStock",
       seller: {
@@ -105,6 +106,33 @@ export default async function ProductDetailPage({
         merchantReturnDays: 2,
         returnMethod: "https://schema.org/ReturnInStore",
         returnFees: "https://schema.org/FreeReturn",
+      },
+      shippingDetails: {
+        "@type": "OfferShippingDetails",
+        shippingRate: {
+          "@type": "MonetaryAmount",
+          value: "0",
+          currency: "INR",
+        },
+        shippingDestination: {
+          "@type": "DefinedRegion",
+          addressCountry: "IN",
+        },
+        deliveryTime: {
+          "@type": "ShippingDeliveryTime",
+          handlingTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 1,
+            unitCode: "d",
+          },
+          transitTime: {
+            "@type": "QuantitativeValue",
+            minValue: 0,
+            maxValue: 1,
+            unitCode: "d",
+          },
+        },
       },
     },
     aggregateRating: {

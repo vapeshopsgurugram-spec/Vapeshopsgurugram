@@ -9,8 +9,8 @@ const STORE_INFO = {
   tagline: "Gurgaon's #1 Premium Vape & Disposable Pod Destination",
   description:
     "Official store for 100% authentic disposable vapes, pod systems, coils, and premium imported e-liquids in Gurgaon.",
-  phone: "+91 89509 53934",
-  whatsappNumber: "918950953934",
+  phone: "+91 96716 39718",
+  whatsappNumber: "919671639718",
   email: "orders@vapestoregurugram.com",
   city: "Gurgaon",
   state: "Haryana",
