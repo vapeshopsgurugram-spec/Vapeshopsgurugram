@@ -8,11 +8,11 @@ import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
   title: {
-    default: "Vape Shop In Gurgaon | 30-60 Min Express Delivery Delhi NCR",
+    default: "Vape Shop In Gurgaon | 30-60 Min Delivery (Cash On Delivery)",
     template: "%s | Vape Shop In Gurgaon",
   },
   description:
-    "Looking for a trusted vape shop in Gurgaon? Shop authentic disposable vapes, pod kits & imported e-liquids with 30-60 min express delivery & COD in Gurgaon.",
+    "Gurgaon's #1 trusted vape shop. Shop authentic disposable vapes, pod kits & imported e-liquids with 30-60 min express delivery & COD across all Gurgaon sectors.",
   keywords: [
     // 1. Gurgaon & Gurugram Core Commercial Keywords
     "Vape Store Gurgaon",

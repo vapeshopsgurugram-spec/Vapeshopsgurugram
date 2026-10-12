@@ -12,7 +12,7 @@ import {
   ArrowRight,
   MessageCircle,
 } from "lucide-react";
-import { STORE_INFO, CATEGORIES } from "@/data/products";
+import { STORE_INFO, CATEGORIES, PRODUCTS } from "@/data/products";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -24,11 +24,15 @@ export default function Footer() {
     { text: "Vape Store in Noida", href: "/products" },
     { text: "Vape Store Near Me", href: "/products" },
     { text: "Disposable Vapes Gurgaon", href: "/category/disposable-vapes" },
-    { text: "Yuoto Thanos 5000 Puffs", href: "/search?q=Yuoto" },
-    { text: "Lost Mary 15000 Turbo", href: "/search?q=Lost+Mary" },
-    { text: "Elf Bar BC5000 India", href: "/search?q=Elf+Bar" },
-    { text: "Uwell Caliburn G3 Pod Kit", href: "/search?q=Caliburn" },
-    { text: "IGET Moon 5000 Puffs", href: "/search?q=IGET" },
+    { text: "Yuoto Digi 15000 Puffs", href: "/product/yuoto-digi-15000-disposable-pod-device" },
+    { text: "Lost Mary Nera 70000 Puffs", href: "/product/lost-mary-nera-fullview-70000-disposable-kit" },
+    { text: "Elf Bar BC5000 US Edition", href: "/product/ebcreate-bc5000-disposable-pod-device-us-edition" },
+    { text: "Geek Bar Burj 80000 Puffs", href: "/product/geek-bar-burj-80000-disposable-pod-device" },
+    { text: "Uwell Caliburn A2 Pod Kit", href: "/product/uwell-caliburn-a2-pod-system" },
+    { text: "Vaporesso XROS 5 Kit", href: "/product/vaporesso-xros-5-pod-system-kit" },
+    { text: "IGET Move 50000 Puffs", href: "/product/iget-move-b50000-disposable-pod-device" },
+    { text: "Al Fakher Crown Bar 40K", href: "/product/al-fakher-crown-bar-40k-megamax-disposable-pod" },
+    { text: "Elf Bar Raya D3 Pro 30K", href: "/product/elfbar-raya-d3-pro-30000-disposable-pod-device" },
     { text: "Same Day Vape Delivery Delhi NCR", href: "/products" },
     { text: "Late Night Vape Delivery Gurgaon", href: "/products" },
     { text: "Cash on Delivery Vapes Gurgaon & Delhi", href: "/products" },
@@ -211,28 +215,28 @@ export default function Footer() {
             </h4>
             <ul className="space-y-2 text-xs text-slate-400">
               <li>
-                <Link href="/search?q=Yuoto" className="hover:text-purple-400 transition-colors">
-                  Yuoto Thanos 5000 Puffs
+                <Link href="/product/yuoto-digi-15000-disposable-pod-device" className="hover:text-purple-400 transition-colors">
+                  Yuoto Digi 15000 Puffs
                 </Link>
               </li>
               <li>
-                <Link href="/search?q=Lost+Mary" className="hover:text-purple-400 transition-colors">
-                  Lost Mary MT15000 Turbo
+                <Link href="/product/lost-mary-nera-fullview-70000-disposable-kit" className="hover:text-purple-400 transition-colors">
+                  Lost Mary Nera 70000 Turbo
                 </Link>
               </li>
               <li>
-                <Link href="/search?q=Caliburn" className="hover:text-purple-400 transition-colors">
-                  Uwell Caliburn A3S &amp; G3
+                <Link href="/product/uwell-caliburn-a2-pod-system" className="hover:text-purple-400 transition-colors">
+                  Uwell Caliburn A2 Pod Kit
                 </Link>
               </li>
               <li>
-                <Link href="/search?q=Elf+Bar" className="hover:text-purple-400 transition-colors">
-                  Elf Bar BC5000 Disposables
+                <Link href="/product/ebcreate-bc5000-disposable-pod-device-us-edition" className="hover:text-purple-400 transition-colors">
+                  Elf Bar / EBCREATE BC5000
                 </Link>
               </li>
               <li>
-                <Link href="/search?q=IGET" className="hover:text-purple-400 transition-colors">
-                  IGET Moon &amp; Star Series
+                <Link href="/product/iget-move-b50000-disposable-pod-device" className="hover:text-purple-400 transition-colors">
+                  IGET Move 50000 Puffs
                 </Link>
               </li>
               <li>
@@ -293,6 +297,27 @@ export default function Footer() {
                 className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-[11px] text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
               >
                 {item.text}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* 5. Direct Crawlable Products Directory for Google & Users */}
+        <div className="py-6 border-b border-slate-800/80 space-y-3">
+          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center justify-between">
+            <span>Verified Vape Devices in Gurgaon (30-60 Min Delivery)</span>
+            <Link href="/products" className="text-purple-400 hover:text-purple-300 font-semibold lowercase">
+              view all {PRODUCTS.length} devices →
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
+            {PRODUCTS.map((prod) => (
+              <Link
+                key={prod.id}
+                href={`/product/${prod.slug || prod.id}`}
+                className="px-2.5 py-1 rounded-md bg-slate-900/90 border border-slate-800 text-[11px] text-slate-300 hover:text-purple-300 hover:border-purple-500/50 transition-colors"
+              >
+                {prod.name}
               </Link>
             ))}
           </div>

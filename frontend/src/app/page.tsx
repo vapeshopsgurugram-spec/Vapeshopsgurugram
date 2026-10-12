@@ -146,13 +146,13 @@ export default function HomePage() {
               <span className="text-slate-600 font-medium">Gurgaon • Delhi • Noida NCR</span>
             </div>
 
-            {/* Primary SEO H1 Headline */}
+            {/* Primary SEO H1 Headline with Exact Target Keyword */}
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.14]">
-              Gurgaon, Delhi &amp; Noida&apos;s #1{" "}
+              #1{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-500">
-                Vape &amp; Pod
+                Vape Shop in Gurgaon
               </span>{" "}
-              Store
+              &amp; Delhi NCR
             </h1>
 
             {/* Keyword-Rich SEO Location Description */}
@@ -340,11 +340,11 @@ export default function HomePage() {
             </span>
             <div className="flex flex-wrap gap-1.5 text-[11px]">
               {[
-                { label: "Yuoto Thanos 5000", href: "/search?q=Yuoto" },
-                { label: "Lost Mary 15000 Puffs", href: "/search?q=Lost+Mary" },
-                { label: "Elf Bar BC5000", href: "/search?q=Elf+Bar" },
-                { label: "Uwell Caliburn Pods", href: "/search?q=Caliburn" },
-                { label: "IGET Moon Disposables", href: "/search?q=IGET" },
+                { label: "Yuoto Digi 15000", href: "/product/yuoto-digi-15000-disposable-pod-device" },
+                { label: "Lost Mary Nera 70K", href: "/product/lost-mary-nera-fullview-70000-disposable-kit" },
+                { label: "Elf Bar BC5000", href: "/product/ebcreate-bc5000-disposable-pod-device-us-edition" },
+                { label: "Uwell Caliburn A2", href: "/product/uwell-caliburn-a2-pod-system" },
+                { label: "IGET Move 50K", href: "/product/iget-move-b50000-disposable-pod-device" },
                 { label: "Vape Delivery DLF Cyber City", href: "/products" },
                 { label: "Golf Course Road Vapes", href: "/products" },
                 { label: "South Delhi Vape Store", href: "/products" },
