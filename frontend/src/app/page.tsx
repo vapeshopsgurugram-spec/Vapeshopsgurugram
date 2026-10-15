@@ -29,52 +29,20 @@ const DELIVERY_HUBS = [
 
 const FAQS = [
   {
-    q: "Do you deliver vapes in Gurgaon, Delhi and Noida?",
-    a: "Yes! We provide 30 to 60-minute instant delivery across all sectors of Gurgaon (DLF, Cyber City, Golf Course Road, Sohna Road), as well as fast same-day express delivery across South Delhi, Central Delhi, West Delhi, Noida, and Greater Noida.",
+    q: "How fast is the vape delivery in Gurugram and Delhi NCR?",
+    a: "We pride ourselves on lightning-fast speed. If you are searching for a reliable vape shop near me with instant dispatch, we are your best choice. We guarantee 30-to-45 minute express vape delivery in Gurgaon, and rapid same-day vape delivery in Delhi.",
   },
   {
-    q: "How can I order vapes in Delhi NCR with Cash on Delivery?",
-    a: "You can easily order directly through our website cart or via WhatsApp (+91 96716 39718). We accept Cash on Delivery (COD) and doorstep UPI (Google Pay, PhonePe, Paytm) across Gurgaon, Delhi, and Noida.",
+    q: "Are the products at your vape store 100% authentic?",
+    a: "Absolutely. Whether you are ordering from our vape store Gurgaon or requesting dispatch from our wider NCR network, every disposable vape, pod system, and e-liquid we sell is 100% genuine. All premium devices come with a verifiable factory scratch code.",
   },
   {
-    q: "Are the vapes and pod kits 100% authentic?",
-    a: "Yes, every single product is 100% factory original and comes sealed with an anti-counterfeit scratch-off QR code that you can verify directly on the official manufacturer website (Yuoto, Elf Bar, Lost Mary, Caliburn, IGET).",
+    q: "Do you offer Cash on Delivery (COD)?",
+    a: "Yes, we understand that trust is essential. As the premier vape shop Gurgaon, we offer seamless Cash on Delivery (COD) for all local express orders, including deliveries in DLF Cyber City, Sohna Road, and South Delhi. You only pay when the rider hands you the sealed package.",
   },
   {
-    q: "What are the most popular vape brands available?",
-    a: "Our top-selling products in Delhi NCR include Yuoto Thanos 5000, Lost Mary MT15000 Turbo, Uwell Caliburn Pod Kits, Elf Bar Disposables, IGET Moon, and premium imported nicotine salt e-liquids.",
-  },
-  {
-    q: "Is discreet packaging guaranteed?",
-    a: "Yes. All orders are packed in unmarked, tamper-evident protective packaging with zero product branding on the outside for complete privacy.",
-  },
-  {
-    q: "What should I know about vape shops in Gurugram?",
-    a: "When searching for a vape shop in Gurugram, it is important to understand the applicable laws in India. The Prohibition of Electronic Cigarettes Act, 2019 restricts the sale, distribution, storage and advertisement of electronic cigarettes and related devices.",
-  },
-  {
-    q: "Are electronic cigarettes legal in Gurugram?",
-    a: "Electronic cigarettes, including devices covered under India's Prohibition of Electronic Cigarettes Act, 2019, are subject to a nationwide prohibition. Consumers and businesses should refer to the applicable legislation and official government guidance.",
-  },
-  {
-    q: "What does the term “vape shop Gurugram” mean?",
-    a: "The search term “vape shop Gurugram” is commonly used by people looking for information about vaping products and related businesses in Gurugram, Haryana. Anyone researching these products should first understand the legal restrictions that apply in India.",
-  },
-  {
-    q: "What are electronic cigarettes?",
-    a: "Electronic cigarettes are devices that heat a substance, with or without nicotine or flavourings, to create an aerosol for inhalation. India's 2019 legislation covers electronic nicotine delivery systems and certain similar devices.",
-  },
-  {
-    q: "Where can I find official information about vape regulations in Gurugram?",
-    a: "For reliable information about electronic cigarette regulations in Gurugram and across India, consult the official Prohibition of Electronic Cigarettes Act, 2019, published on the India Code website.",
-  },
-  {
-    q: "What should businesses know about vaping regulations in Gurugram?",
-    a: "Businesses operating in Gurugram should review the applicable laws before publishing content, listing products or making claims relating to electronic cigarettes. The law prohibits several activities relating to these devices, including their sale, distribution, storage and advertisement.",
-  },
-  {
-    q: "Where can I read more about India's electronic cigarette law?",
-    a: "You can read the full legislation through the Government of India's India Code portal. Reviewing the original legislation is a useful starting point for understanding the restrictions applicable to electronic cigarettes and related devices.",
+    q: "Where is this vape shop near me located?",
+    a: "We operate as a high-speed, hyper-local fulfillment hub. Instead of making you travel in traffic to the best vape shop Gurgaon has to offer, we bring the shop directly to your doorstep. Simply tap the WhatsApp button on any product to instantly connect with our dispatch team.",
   },
 ];
 
