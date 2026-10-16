@@ -142,7 +142,7 @@ export default function AboutPage() {
       closes: "23:30",
     },
     sameAs: [
-      "https://wa.me/919671639718",
+      `https://wa.me/${STORE_INFO.whatsappNumber}`,
     ],
   };
 
