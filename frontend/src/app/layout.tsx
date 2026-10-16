@@ -12,7 +12,7 @@ export const metadata: Metadata = {
     template: "%s | Best Vape Shop Gurgaon",
   },
   description:
-    "Gurgaon's #1 trusted vape shop. Shop authentic 100% Premium disposable vapes, pod kits & imported e-liquids with 30-60 min express delivery",
+    "Gurgaon's #1 trusted vape shop. Shop authentic 100% Premium disposable vapes, pod kits and imported e-liquids with 30-60 min express delivery. WhatsApp: +91 96716 39718",
   keywords: [
     // 1. Gurgaon & Gurugram Core Commercial Keywords
     "Vape Store Gurgaon",
@@ -309,9 +309,15 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "https://vapestoregurugram.com/banners/vapestoregurgaon%20banner.png",
-        width: 1953,
-        height: 805,
+        url: "https://vapestoregurugram.com/products/ebcreate-bc5000-disposable-pod-device.webp",
+        width: 1000,
+        height: 1000,
+        alt: "Best Vape Shop Gurgaon - Buy Authentic Vapes and Pods",
+      },
+      {
+        url: "https://vapestoregurugram.com/banner.webp",
+        width: 1200,
+        height: 630,
         alt: "Vape Store Gurgaon - Premium Vapes & Pods Delivery",
       },
     ],
@@ -321,7 +327,10 @@ export const metadata: Metadata = {
     title: "Vape Shop In Gurgaon | 30-60 Min Express Delivery Delhi NCR",
     description:
       "Looking for a trusted vape shop in Gurgaon? Shop authentic disposable vapes, pod kits & imported e-liquids with 30-60 min express delivery & COD in Gurgaon.",
-    images: ["https://vapestoregurugram.com/banners/vapestoregurgaon%20banner.png"],
+    images: [
+      "https://vapestoregurugram.com/products/ebcreate-bc5000-disposable-pod-device.webp",
+      "https://vapestoregurugram.com/banner.webp",
+    ],
   },
   robots: {
     index: true,
@@ -374,7 +383,10 @@ export default function RootLayout({
     ],
     url: "https://vapestoregurugram.com",
     logo: "https://vapestoregurugram.com/icon.png",
-    image: "https://vapestoregurugram.com/banners/vapestoregurgaon%20banner.png",
+    image: [
+      "https://vapestoregurugram.com/products/ebcreate-bc5000-disposable-pod-device.webp",
+      "https://vapestoregurugram.com/banner.webp",
+    ],
     description:
       "Gurgaon's #1 premier store for 100% authentic disposable vapes, refillable pod kits, coils & imported nic salts. 30-60 min express delivery in Gurgaon (DLF, Cyber City, Golf Course Road) & same-day delivery in Delhi NCR with COD & UPI.",
     telephone: "+91 96716 39718",
@@ -433,6 +445,29 @@ export default function RootLayout({
     },
   };
 
+  const webPageSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    "@id": "https://vapestoregurugram.com/#webpage",
+    url: "https://vapestoregurugram.com",
+    name: "Best Vape Shop Gurgaon | Buy 100% Premium Vapes & Pods Online",
+    description:
+      "Gurgaon's #1 trusted vape shop. Shop authentic 100% Premium disposable vapes, pod kits and imported e-liquids with 30-60 min express delivery. WhatsApp: +91 96716 39718",
+    primaryImageOfPage: {
+      "@type": "ImageObject",
+      "@id": "https://vapestoregurugram.com/#primaryimage",
+      url: "https://vapestoregurugram.com/products/ebcreate-bc5000-disposable-pod-device.webp",
+      contentUrl: "https://vapestoregurugram.com/products/ebcreate-bc5000-disposable-pod-device.webp",
+      width: "1000",
+      height: "1000",
+      caption: "Best Vape Shop Gurgaon - Buy Authentic Vapes and Pods",
+    },
+    image: [
+      "https://vapestoregurugram.com/products/ebcreate-bc5000-disposable-pod-device.webp",
+      "https://vapestoregurugram.com/banner.webp",
+    ],
+  };
+
   const websiteSchema = {
     "@context": "https://schema.org",
     "@type": "WebSite",
@@ -461,6 +496,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webPageSchema) }}
         />
         <script
           type="application/ld+json"
