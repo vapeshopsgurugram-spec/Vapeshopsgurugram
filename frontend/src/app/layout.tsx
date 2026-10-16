@@ -424,6 +424,13 @@ export default function RootLayout({
       { "@type": "City", name: "Noida" },
       { "@type": "City", name: "Greater Noida" },
     ],
+    aggregateRating: {
+      "@type": "AggregateRating",
+      ratingValue: "4.9",
+      reviewCount: "485",
+      bestRating: "5",
+      worstRating: "1",
+    },
   };
 
   const websiteSchema = {

@@ -13,10 +13,10 @@ import {
   MessageCircle,
 } from "lucide-react";
 import { STORE_INFO, CATEGORIES, PRODUCTS } from "@/data/products";
+import { GURGAON_AREAS } from "@/data/areas";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
-
 
   const POPULAR_SEARCHES = [
     { text: "Vape Store in Gurgaon", href: "/products" },
@@ -33,17 +33,21 @@ export default function Footer() {
     { text: "IGET Move 50000 Puffs", href: "/product/iget-move-b50000-disposable-pod-device" },
     { text: "Al Fakher Crown Bar 40K", href: "/product/al-fakher-crown-bar-40k-megamax-disposable-pod" },
     { text: "Elf Bar Raya D3 Pro 30K", href: "/product/elfbar-raya-d3-pro-30000-disposable-pod-device" },
+    { text: "DLF Cyber City Vape Delivery", href: "/gurgaon/dlf-cyber-city" },
+    { text: "Golf Course Road Vape Delivery", href: "/gurgaon/golf-course-road" },
+    { text: "Galleria Market DLF Phase 4", href: "/gurgaon/galleria-market-dlf-phase-4" },
+    { text: "Sohna Road Gurgaon Vapes", href: "/gurgaon/sohna-road" },
+    { text: "Sector 29 Gurgaon Vape Store", href: "/gurgaon/sector-29" },
+    { text: "DLF Phase 1 Vape Delivery", href: "/gurgaon/dlf-phase-1" },
+    { text: "DLF Phase 2 Vape Delivery", href: "/gurgaon/dlf-phase-2" },
+    { text: "DLF Phase 3 Vape Store", href: "/gurgaon/dlf-phase-3" },
+    { text: "Sushant Lok 1 Vape Delivery", href: "/gurgaon/sushant-lok-1" },
+    { text: "Nirvana Country Sector 50", href: "/gurgaon/nirvana-country" },
+    { text: "Palam Vihar Vape Store", href: "/gurgaon/palam-vihar" },
+    { text: "New Gurgaon Sector 82-84", href: "/gurgaon/new-gurgaon-sector-82-84" },
     { text: "Same Day Vape Delivery Delhi NCR", href: "/products" },
     { text: "Late Night Vape Delivery Gurgaon", href: "/products" },
     { text: "Cash on Delivery Vapes Gurgaon & Delhi", href: "/products" },
-    { text: "South Delhi Vape Delivery (Saket & GK)", href: "/products" },
-    { text: "Hauz Khas & Green Park Vape Delivery", href: "/products" },
-    { text: "DLF Cyber City & Galleria Vape Store", href: "/contact" },
-    { text: "Golf Course Road Vape Delivery", href: "/products" },
-    { text: "Sohna Road Gurgaon Vapes", href: "/products" },
-    { text: "Noida Sector 18 & 62 Vape Store", href: "/products" },
-    { text: "Greater Noida Same Day Delivery", href: "/products" },
-    { text: "Dwarka & West Delhi Vape Store", href: "/products" },
     { text: "Nic Salt E-Liquids 20mg / 50mg", href: "/category/e-liquids" },
     { text: "Vape Replacement Pods & Coils", href: "/category/coils-pods" },
     { text: "Authentic Vape Store Delhi NCR", href: "/about" },
@@ -297,6 +301,29 @@ export default function Footer() {
                 className="px-2.5 py-1 rounded-md bg-slate-900 border border-slate-800 text-[11px] text-slate-400 hover:text-white hover:border-slate-700 transition-colors"
               >
                 {item.text}
+              </Link>
+            ))}
+          </div>
+        </div>
+
+        {/* 4.5. Hyper-Local Gurgaon Sectors & Areas Directory (Top Local SEO) */}
+        <div className="py-6 border-b border-slate-800/80 space-y-3">
+          <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center justify-between">
+            <span>Express Vape Delivery Across Gurgaon Sectors (15-35 Min ETA)</span>
+            <span className="text-emerald-400 text-[10px] font-semibold lowercase">
+              ⚡ instant courier dispatch
+            </span>
+          </div>
+          <div className="flex flex-wrap gap-1.5 sm:gap-2">
+            {GURGAON_AREAS.map((area) => (
+              <Link
+                key={area.slug}
+                href={`/gurgaon/${area.slug}`}
+                className="px-2.5 py-1 rounded-md bg-slate-900/90 border border-slate-800/90 text-[11px] text-slate-300 hover:text-emerald-300 hover:border-emerald-500/50 transition-colors inline-flex items-center gap-1.5"
+              >
+                <span className="h-1.5 w-1.5 rounded-full bg-emerald-400" />
+                <span>{area.name}</span>
+                <span className="text-[9px] text-slate-500">({area.deliveryTime})</span>
               </Link>
             ))}
           </div>

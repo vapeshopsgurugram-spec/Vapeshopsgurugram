@@ -6,8 +6,10 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
+        disallow: ["/search", "/api/"],
       },
     ],
     sitemap: "https://vapestoregurugram.com/sitemap.xml",
   };
 }
+

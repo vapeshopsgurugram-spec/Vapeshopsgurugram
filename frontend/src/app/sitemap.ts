@@ -1,6 +1,7 @@
 import { MetadataRoute } from "next";
 import { PRODUCTS, CATEGORIES } from "@/data/products";
 import { BLOG_POSTS } from "@/data/blogs";
+import { GURGAON_AREAS } from "@/data/areas";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://vapestoregurugram.com";
@@ -8,7 +9,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   // Static Pages
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: `${baseUrl}/`,
+      url: baseUrl,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 1.0,
@@ -59,6 +60,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
+  // Gurgaon Micro-Locality / Sector Landing Pages (High Commercial Local SEO)
+  const areaPages: MetadataRoute.Sitemap = GURGAON_AREAS.map((area) => ({
+    url: `${baseUrl}/gurgaon/${area.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: 0.88,
+  }));
+
   // Dynamic Product Pages
   const productPages: MetadataRoute.Sitemap = PRODUCTS.map((product) => ({
     url: `${baseUrl}/product/${product.slug || product.id}`,
@@ -75,5 +84,11 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  return [...staticPages, ...categoryPages, ...productPages, ...blogPages];
+  return [
+    ...staticPages,
+    ...categoryPages,
+    ...areaPages,
+    ...productPages,
+    ...blogPages,
+  ];
 }
