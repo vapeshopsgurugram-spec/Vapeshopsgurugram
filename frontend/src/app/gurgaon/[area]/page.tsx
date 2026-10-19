@@ -120,7 +120,7 @@ export default async function GurgaonAreaPage({
   // Schema: LocalBusiness for this Specific Sector
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "VapeShop",
+    "@type": "Store",
     name: `Vape Store Gurgaon - ${area.name} Express Delivery`,
     image: "https://vapestoregurugram.com/banners/vapestoregurgaon%20banner.png",
     url: `https://vapestoregurugram.com/gurgaon/${area.slug}`,
@@ -157,13 +157,6 @@ export default async function GurgaonAreaPage({
         closes: "23:30",
       },
     ],
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: "4.9",
-      reviewCount: "485",
-      bestRating: "5",
-      worstRating: "1",
-    },
     areaServed: {
       "@type": "AdministrativeArea",
       name: area.name,

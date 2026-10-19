@@ -18,6 +18,25 @@ import { GURGAON_AREAS } from "@/data/areas";
 export default function Footer() {
   const currentYear = new Date().getFullYear();
 
+  const VAPE_STORE_GURGAON_HOT_KEYWORDS = [
+    { text: "Vape Store Gurgaon", href: "/" },
+    { text: "Best Vape Store in Gurgaon", href: "/blog/best-vape-shop-in-gurgaon-online-delivery-guide" },
+    { text: "Vape Store Gurugram", href: "/" },
+    { text: "Vape Store Near Me Gurgaon", href: "/contact" },
+    { text: "Vape Store DLF Cyber City", href: "/gurgaon/dlf-cyber-city" },
+    { text: "Vape Store Golf Course Road", href: "/gurgaon/golf-course-road" },
+    { text: "Vape Store Galleria Market DLF", href: "/gurgaon/galleria-market-dlf-phase-4" },
+    { text: "Vape Store Sohna Road Gurgaon", href: "/gurgaon/sohna-road" },
+    { text: "Vape Store Sector 29 Gurgaon", href: "/gurgaon/sector-29" },
+    { text: "Vape Store Gurgaon Open Now", href: "/contact" },
+    { text: "Authentic Vape Store Gurgaon", href: "/about" },
+    { text: "30 Min Vape Delivery Gurgaon", href: "/blog/best-vape-shop-in-gurgaon-online-delivery-guide" },
+    { text: "Vape Store Gurgaon Cash on Delivery", href: "/products" },
+    { text: "Buy Disposable Vapes Gurgaon", href: "/category/disposable-vapes" },
+    { text: "Vape Store Gurgaon Contact Number", href: "/contact" },
+    { text: "Online Vape Delivery Gurgaon", href: "/products" },
+  ];
+
   const POPULAR_SEARCHES = [
     { text: "Vape Store in Gurgaon", href: "/products" },
     { text: "Vape Delivery Delhi", href: "/products" },
@@ -287,6 +306,39 @@ export default function Footer() {
         </div>
 
 
+
+        {/* 3.5. Hot Keyword Authority Hub: Vape Store Gurgaon (High Commercial Local SEO) */}
+        <div className="my-8 p-5 sm:p-6 rounded-2xl bg-gradient-to-r from-purple-950/30 via-slate-900/50 to-slate-950/70 border border-purple-500/20 shadow-lg space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-slate-800/80 pb-3">
+            <div className="flex items-center gap-2.5">
+              <span className="flex h-6 w-6 items-center justify-center rounded-lg bg-orange-500/20 text-orange-400 border border-orange-500/30 text-xs">
+                🔥
+              </span>
+              <h3 className="text-xs sm:text-sm font-extrabold text-white tracking-wide uppercase">
+                Hot Searches: <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-400 via-pink-300 to-indigo-300">Vape Store Gurgaon</span>
+              </h3>
+            </div>
+            <span className="text-[11px] font-bold text-purple-300 bg-purple-500/10 px-3 py-1 rounded-full border border-purple-500/20 self-start sm:self-auto">
+              #1 Rated Vape Store in Gurgaon
+            </span>
+          </div>
+
+          <p className="text-[11px] sm:text-xs text-slate-300/90 leading-relaxed">
+            <strong className="text-white">Vape Store Gurgaon</strong> (vapestoregurugram.com) is Gurugram&apos;s premier destination for 100% genuine disposable vapes, refillable pod systems, replacement coils, and imported nicotine salt e-liquids. We provide dedicated hyper-local 30 to 60-minute express courier delivery across DLF Cyber City, Golf Course Road, Sohna Road, and Delhi NCR with verified factory scratch codes and Cash on Delivery (COD) &amp; UPI.
+          </p>
+
+          <div className="flex flex-wrap gap-2 pt-1">
+            {VAPE_STORE_GURGAON_HOT_KEYWORDS.map((item) => (
+              <Link
+                key={item.text}
+                href={item.href}
+                className="px-3 py-1.5 rounded-lg bg-slate-900/90 border border-purple-900/40 text-[11px] font-medium text-slate-300 hover:text-white hover:border-purple-400 hover:bg-purple-950/60 transition-all shadow-sm"
+              >
+                {item.text}
+              </Link>
+            ))}
+          </div>
+        </div>
 
         {/* 4. Popular Searches & SEO Keywords Cloud */}
         <div className="py-6 border-b border-slate-800/80 space-y-3">

@@ -135,11 +135,6 @@ export default async function ProductDetailPage({
         },
       },
     },
-    aggregateRating: {
-      "@type": "AggregateRating",
-      ratingValue: product.rating,
-      reviewCount: product.reviewsCount || 120,
-    },
   };
 
   const productFaqs = [

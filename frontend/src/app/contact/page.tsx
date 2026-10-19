@@ -52,7 +52,7 @@ export default function ContactPage() {
     description: "Contact Vape Store Gurgaon for doorstep vape delivery across Gurgaon and Delhi NCR.",
     url: "https://vapestoregurugram.com/contact",
     mainEntity: {
-      "@type": "VapeShop",
+      "@type": "Store",
       name: "Vape Store Gurgaon",
       telephone: STORE_INFO.phone,
       url: "https://vapestoregurugram.com",

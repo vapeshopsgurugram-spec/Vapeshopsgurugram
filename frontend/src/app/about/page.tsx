@@ -107,7 +107,7 @@ export default function AboutPage() {
 
   const localBusinessSchema = {
     "@context": "https://schema.org",
-    "@type": "VapeShop",
+    "@type": "Store",
     name: "Vape Store Gurgaon",
     image: "https://vapestoregurugram.com/banners/vapestoregurgaon%20banner.png",
     "@id": "https://vapestoregurugram.com/#store",
