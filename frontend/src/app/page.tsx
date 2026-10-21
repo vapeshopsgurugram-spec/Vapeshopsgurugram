@@ -29,20 +29,24 @@ const DELIVERY_HUBS = [
 
 const FAQS = [
   {
-    q: "How fast is the vape delivery in Gurugram and Delhi NCR?",
-    a: "We pride ourselves on lightning-fast speed. If you are searching for a reliable vape shop near me with instant dispatch, we are your best choice. We guarantee 30-to-45 minute express vape delivery in Gurgaon, and rapid same-day vape delivery in Delhi.",
+    q: "How fast is express vape delivery in Gurgaon (DLF Cyber City, Golf Course Road & Sohna Road)?",
+    a: "We provide instant 30 to 45-minute express doorstep delivery across all prominent localities of Gurgaon, including DLF Phase 1-5, Cyber City, Golf Course Road, Galleria Market, and Sohna Road. For South Delhi, Central Delhi, and Noida, we offer rapid same-day courier dispatch.",
   },
   {
-    q: "Are the products at your vape store 100% authentic?",
-    a: "Absolutely. Whether you are ordering from our vape store Gurgaon or requesting dispatch from our wider NCR network, every disposable vape, pod system, and e-liquid we sell is 100% genuine. All premium devices come with a verifiable factory scratch code.",
+    q: "Are popular brands like Geek Bar, Elf Bar, and Lost Mary 100% authentic with scratch verification?",
+    a: "Yes, every disposable vape, pod device, and nic salt e-liquid is 100% genuine and factory-sealed. All devices feature an official manufacturer anti-counterfeit QR scratch code that you can verify online before unsealing.",
   },
   {
-    q: "Do you offer Cash on Delivery (COD)?",
-    a: "Yes, we understand that trust is essential. As the premier vape shop Gurgaon, we offer seamless Cash on Delivery (COD) for all local express orders, including deliveries in DLF Cyber City, Sohna Road, and South Delhi. You only pay when the rider hands you the sealed package.",
+    q: "Do you offer Cash on Delivery (COD) and doorstep UPI in Gurgaon & Delhi NCR?",
+    a: "Yes, we offer hassle-free Cash on Delivery (COD) as well as contactless doorstep UPI (Google Pay, PhonePe, Paytm) across Gurgaon and Delhi NCR. You only pay once the rider hands you the sealed package.",
   },
   {
-    q: "Where is this vape shop near me located?",
-    a: "We operate as a high-speed, hyper-local fulfillment hub. Instead of making you travel in traffic to the best vape shop Gurgaon has to offer, we bring the shop directly to your doorstep. Simply tap the WhatsApp button on any product to instantly connect with our dispatch team.",
+    q: "Can I get late-night vape delivery in Gurgaon?",
+    a: "Yes, our local courier fleet operates late into the night across Gurgaon sectors and Delhi NCR. Simply connect with our dispatch team on WhatsApp for immediate live order tracking and express rider allocation.",
+  },
+  {
+    q: "Which high-puff disposable vapes are available at Vape Store Gurgaon?",
+    a: "We stock the latest high-puff models including Geek Bar Burj 80000, Lost Mary Nera 70000, Elf Bar / EBCREATE BC5000 US Edition, Yuoto Digi 15000, IGET Move 50000, and refillable Uwell Caliburn pod kits.",
   },
 ];
 
@@ -308,6 +312,7 @@ export default function HomePage() {
             </span>
             <div className="flex flex-wrap gap-1.5 text-[11px]">
               {[
+                { label: "Geek Bar Burj 80K", href: "/product/geek-bar-burj-80000-disposable-pod-device" },
                 { label: "Yuoto Digi 15000", href: "/product/yuoto-digi-15000-disposable-pod-device" },
                 { label: "Lost Mary Nera 70K", href: "/product/lost-mary-nera-fullview-70000-disposable-kit" },
                 { label: "Elf Bar BC5000", href: "/product/ebcreate-bc5000-disposable-pod-device-us-edition" },
