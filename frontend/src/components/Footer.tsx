@@ -19,21 +19,21 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   const VAPE_STORE_GURGAON_HOT_KEYWORDS = [
+    { text: "Vape Shop Gurgaon", href: "/" },
+    { text: "Best Vape Shop Gurgaon", href: "/blog/best-vape-shop-in-gurgaon-online-delivery-guide" },
+    { text: "Vape Shop Near Me Gurgaon", href: "/contact" },
+    { text: "Vape Shop Gurgaon COD", href: "/products" },
+    { text: "Vape Shop DLF Cyber City", href: "/gurgaon/dlf-cyber-city" },
+    { text: "Vape Shop Golf Course Road", href: "/gurgaon/golf-course-road" },
+    { text: "Vape Shop Galleria Market DLF", href: "/gurgaon/galleria-market-dlf-phase-4" },
+    { text: "Vape Shop Sector 29 Gurgaon", href: "/gurgaon/sector-29" },
+    { text: "Vape Shop Sohna Road", href: "/gurgaon/sohna-road" },
     { text: "Vape Store Gurgaon", href: "/" },
-    { text: "Best Vape Store in Gurgaon", href: "/blog/best-vape-shop-in-gurgaon-online-delivery-guide" },
     { text: "Vape Store Gurugram", href: "/" },
-    { text: "Vape Store Near Me Gurgaon", href: "/contact" },
-    { text: "Vape Store DLF Cyber City", href: "/gurgaon/dlf-cyber-city" },
-    { text: "Vape Store Golf Course Road", href: "/gurgaon/golf-course-road" },
-    { text: "Vape Store Galleria Market DLF", href: "/gurgaon/galleria-market-dlf-phase-4" },
-    { text: "Vape Store Sohna Road Gurgaon", href: "/gurgaon/sohna-road" },
-    { text: "Vape Store Sector 29 Gurgaon", href: "/gurgaon/sector-29" },
-    { text: "Vape Store Gurgaon Open Now", href: "/contact" },
-    { text: "Authentic Vape Store Gurgaon", href: "/about" },
     { text: "30 Min Vape Delivery Gurgaon", href: "/blog/best-vape-shop-in-gurgaon-online-delivery-guide" },
-    { text: "Vape Store Gurgaon Cash on Delivery", href: "/products" },
     { text: "Buy Disposable Vapes Gurgaon", href: "/category/disposable-vapes" },
-    { text: "Vape Store Gurgaon Contact Number", href: "/contact" },
+    { text: "Authentic Vape Shop Gurgaon", href: "/about" },
+    { text: "Vape Shop Gurgaon Open Now", href: "/contact" },
     { text: "Online Vape Delivery Gurgaon", href: "/products" },
   ];
 

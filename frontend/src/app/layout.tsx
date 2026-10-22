@@ -8,21 +8,24 @@ import { CartProvider } from "@/context/CartContext";
 
 export const metadata: Metadata = {
   title: {
-    default: "Vape Shop in Gurgaon | 30-60 Min Express Vape Delivery & COD Gurugram",
-    template: "%s | Vape Store Gurgaon",
+    default: "Vape Shop Gurgaon | 30-60 Min Express Vape Delivery Gurugram",
+    template: "%s | Vape Shop Gurgaon",
   },
   description:
-    "Buy authentic disposable vapes, Elf Bar, Geek Bar 80K, Lost Mary, Yuoto & pods in Gurgaon. 100% genuine with scratch verification. 30-60 min express delivery in DLF Cyber City, Golf Course Rd & Delhi NCR with Cash on Delivery (COD).",
+    "Vape Shop Gurgaon - Buy authentic disposable vapes, Elf Bar, Geek Bar 80K, Lost Mary, Yuoto & pod kits. 100% genuine with scratch verification. 30-60 min express delivery in DLF Cyber City, Golf Course Rd .",
   keywords: [
-    // Core Local Keywords
+    // Core High-Intent Keywords (Exact Matches)
+    "Vape Shop Gurgaon",
+    "Best Vape Shop Gurgaon",
     "Vape Shop in Gurgaon",
+    "Vape Shop Near Me Gurgaon",
+    "Vape Shop Gurugram",
     "Vape Store Gurgaon",
     "Vape Delivery Gurgaon 30 mins",
     "Buy Vape Online Gurgaon",
-    "Vape Shop Near Me Gurgaon",
-    "Vape Shop Gurugram",
     "Vape Home Delivery Near Me COD",
     "Order Vape on WhatsApp Gurgaon",
+    "Vape Shop Gurgaon Cash on Delivery",
 
     // Trending Devices & High-Puff Brands
     "Geek Bar Burj 80000 Gurgaon",
@@ -39,10 +42,12 @@ export const metadata: Metadata = {
     "Uwell Caliburn Pods Gurgaon",
 
     // Prime Gurgaon Localities
+    "Vape Shop DLF Cyber City",
     "Vape Delivery DLF Cyber City",
+    "Vape Shop Golf Course Road",
     "Vape Delivery Golf Course Road",
     "Vape Delivery Golf Course Extension",
-    "Vape Store Galleria Market DLF Phase 4",
+    "Vape Shop Galleria Market DLF Phase 4",
     "Vape Delivery Sohna Road",
     "Vape Delivery Nirvana Country",
     "Vape Shop Sector 29 Gurgaon",
@@ -55,9 +60,9 @@ export const metadata: Metadata = {
     "Vape Delivery Delhi NCR Same Day",
     "Original Vape Scratch Code Gurgaon",
   ],
-  authors: [{ name: "Vape Store Gurgaon" }],
-  creator: "Vape Store Gurgaon",
-  publisher: "Vape Store Gurgaon",
+  authors: [{ name: "Vape Shop Gurgaon" }],
+  creator: "Vape Shop Gurgaon",
+  publisher: "Vape Shop Gurgaon",
   metadataBase: new URL("https://vapestoregurugram.com"),
   alternates: {
     canonical: "/",
@@ -69,11 +74,11 @@ export const metadata: Metadata = {
     "ICBM": "28.4682, 77.0822",
   },
   openGraph: {
-    title: "Vape Shop in Gurgaon | 30-60 Min Express Delivery & COD",
+    title: "Vape Shop Gurgaon | 30-60 Min Express Delivery & COD",
     description:
-      "Buy authentic disposable vapes, Elf Bar, Geek Bar 80K, Lost Mary & pods in Gurgaon. 30-60 min express delivery in DLF Cyber City, Golf Course Rd & Delhi NCR with COD.",
+      "Vape Shop Gurgaon - Buy authentic disposable vapes, Elf Bar, Geek Bar 80K, Lost Mary & pods in Gurgaon. 30-60 min express delivery in DLF Cyber City, Golf Course Rd & Delhi NCR with COD.",
     url: "https://vapestoregurugram.com",
-    siteName: "Vape Store Gurgaon",
+    siteName: "Vape Shop Gurgaon",
     locale: "en_IN",
     type: "website",
     images: [
@@ -87,15 +92,15 @@ export const metadata: Metadata = {
         url: "https://vapestoregurugram.com/banner.webp",
         width: 1200,
         height: 630,
-        alt: "Vape Store Gurgaon - Premium Vapes & Pods Delivery",
+        alt: "Vape Shop Gurgaon - Premium Vapes & Pods Delivery",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Vape Shop in Gurgaon | 30-60 Min Express Delivery & COD",
+    title: "Vape Shop Gurgaon | 30-60 Min Express Delivery & COD",
     description:
-      "Buy authentic disposable vapes, Elf Bar, Geek Bar 80K, Lost Mary & pods in Gurgaon. 30-60 min express delivery in DLF Cyber City, Golf Course Rd & Delhi NCR with COD.",
+      "Vape Shop Gurgaon - Buy authentic disposable vapes, Elf Bar, Geek Bar 80K, Lost Mary & pods in Gurgaon. 30-60 min express delivery in DLF Cyber City, Golf Course Rd & Delhi NCR with COD.",
     images: [
       "https://vapestoregurugram.com/products/ebcreate-bc5000-disposable-pod-device.webp",
       "https://vapestoregurugram.com/banner.webp",
@@ -139,12 +144,14 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Store",
     "@id": "https://vapestoregurugram.com/#store",
-    name: "Vape Store Gurgaon",
+    name: "Vape Shop Gurgaon",
     alternateName: [
+      "Best Vape Shop Gurgaon",
+      "Vape Shop in Gurgaon",
+      "Vape Store Gurgaon",
       "Vape Store in Gurgaon",
       "Vape Store Gurugram",
-      "Vape Store in Gurugram",
-      "Vape Shop Gurgaon",
+      "Vape Shop Gurugram",
       "Vape Delivery Gurgaon",
       "Vape Delivery Gurugram",
       "Vape Store Delhi NCR",

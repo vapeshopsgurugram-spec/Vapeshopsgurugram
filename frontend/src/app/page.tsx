@@ -29,6 +29,10 @@ const DELIVERY_HUBS = [
 
 const FAQS = [
   {
+    q: "Which is the best vape shop in Gurgaon for authentic disposable vapes and express delivery?",
+    a: "Vape Shop Gurgaon is the #1 rated destination for 100% authentic vapes, pods, and imported nic salts. Every device features an official manufacturer anti-counterfeit QR scratch code. We provide 30-45 minute express doorstep delivery across DLF Cyber City, Golf Course Road, Sohna Road, and all Gurgaon sectors with Cash on Delivery (COD) and UPI.",
+  },
+  {
     q: "How fast is express vape delivery in Gurgaon (DLF Cyber City, Golf Course Road & Sohna Road)?",
     a: "We provide instant 30 to 45-minute express doorstep delivery across all prominent localities of Gurgaon, including DLF Phase 1-5, Cyber City, Golf Course Road, Galleria Market, and Sohna Road. For South Delhi, Central Delhi, and Noida, we offer rapid same-day courier dispatch.",
   },
@@ -122,15 +126,15 @@ export default function HomePage() {
             <h1 className="text-3xl sm:text-5xl lg:text-6xl font-black text-slate-900 tracking-tight leading-[1.14]">
               #1{" "}
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-purple-600 via-indigo-600 to-pink-500">
-                Vape Shop in Gurgaon
+                Vape Shop Gurgaon
               </span>{" "}
               &amp; Delhi NCR
             </h1>
 
             {/* Keyword-Rich SEO Location Description */}
             <p className="text-sm sm:text-base text-slate-600 leading-relaxed max-w-2xl mx-auto">
-              100% Authentic disposable vapes, refillable pod systems, and premium imported nic salts. 30–60 min instant courier in{" "}
-              <strong className="text-slate-900 font-bold">Gurgaon</strong> (DLF, Cyber City, Golf Course Rd), and same-day delivery across{" "}
+              Welcome to the premier <strong className="text-slate-900 font-bold">Vape Shop Gurgaon</strong> trusts for 100% authentic disposable vapes, refillable pod kits, and imported nic salts. Enjoy 30–60 min express delivery across{" "}
+              <strong className="text-slate-900 font-bold">Gurgaon</strong> (DLF, Cyber City, Golf Course Rd), and same-day courier in{" "}
               <strong className="text-slate-900 font-bold">Delhi</strong> &amp;{" "}
               <strong className="text-slate-900 font-bold">Noida NCR</strong> with Cash on Delivery (COD).
             </p>
@@ -277,10 +281,10 @@ export default function HomePage() {
         <section className="p-6 sm:p-8 rounded-3xl bg-gradient-to-br from-purple-50/60 via-white to-pink-50/40 border border-purple-100/80 shadow-2xs space-y-4">
           <div className="space-y-2">
             <h3 className="text-base sm:text-lg font-bold text-slate-900 tracking-tight">
-              Buy Authentic Vapes, Pods &amp; E-Liquids in Gurgaon, Delhi &amp; Noida NCR
+              Best Vape Shop Gurgaon - Buy Authentic Vapes, Pods &amp; E-Liquids
             </h3>
             <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-              Welcome to <strong>Vape Store Gurgaon</strong>, your trusted online destination for 100% genuine vaping devices, disposable pod bars, refillable kits, and imported nicotine salt e-liquids in the Delhi NCR region. Whether you are searching for <em>&quot;Vape Store in Gurgaon&quot;</em>, <em>&quot;vape delivery in Delhi&quot;</em>, or <em>&quot;vape store in Noida&quot;</em>, we provide lightning-fast doorstep service with genuine factory scratch-code verification.
+              Welcome to <strong>Vape Shop Gurgaon</strong>, your trusted online destination for 100% genuine vaping devices, disposable pod bars, refillable kits, and imported nicotine salt e-liquids in Gurugram and Delhi NCR. Whether you are searching for <em>&quot;Vape Shop Gurgaon&quot;</em>, <em>&quot;Best vape shop near me&quot;</em>, or <em>&quot;vape delivery in Delhi NCR&quot;</em>, we provide lightning-fast doorstep service with genuine factory scratch-code verification.
             </p>
           </div>
 
