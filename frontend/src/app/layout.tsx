@@ -165,7 +165,7 @@ export default function RootLayout({
     ],
     description:
       "Gurgaon's #1 premier store for 100% authentic disposable vapes, refillable pod kits, coils & imported nic salts. 30-60 min express delivery in Gurgaon (DLF, Cyber City, Golf Course Road) & same-day delivery in Delhi NCR with COD & UPI.",
-    telephone: "+91 88168 10870",
+    telephone: "+91 83979 23362",
     priceRange: "₹₹",
     paymentAccepted: ["Cash on Delivery", "UPI", "Google Pay", "PhonePe", "Paytm"],
     currenciesAccepted: "INR",
@@ -221,7 +221,7 @@ export default function RootLayout({
     url: "https://vapestoregurugram.com",
     name: "Best Vape Shop Gurgaon | Buy 100% Premium Vapes & Pods Online",
     description:
-      "Gurgaon's #1 trusted vape shop. Shop authentic 100% Premium disposable vapes, pod kits and imported e-liquids with 30-60 min express delivery. WhatsApp: +91 88168 10870",
+      "Gurgaon's #1 trusted vape shop. Shop authentic 100% Premium disposable vapes, pod kits and imported e-liquids with 30-60 min express delivery. WhatsApp: +91 83979 23362",
     primaryImageOfPage: {
       "@type": "ImageObject",
       "@id": "https://vapestoregurugram.com/#primaryimage",
