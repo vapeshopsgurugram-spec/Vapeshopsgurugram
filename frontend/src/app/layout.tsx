@@ -69,7 +69,7 @@ export const metadata: Metadata = {
   },
   other: {
     "geo.region": "IN-HR, IN-DL, IN-UP",
-    "geo.placename": "Gurgaon, Gurugram, New Delhi, South Delhi, Noida, Delhi NCR",
+    "geo.placename": "Gurgaon, Gurugram, New Delhi, South D, Noelhiida, Delhi NCR",
     "geo.position": "28.4682;77.0822",
     "ICBM": "28.4682, 77.0822",
   },
