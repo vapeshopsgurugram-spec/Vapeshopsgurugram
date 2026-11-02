@@ -259,8 +259,8 @@ export default function RootLayout({
   };
 
   return (
-    <html lang="en" className="h-full bg-slate-50">
-      <body className="min-h-full flex flex-col bg-slate-50 text-slate-900 antialiased selection:bg-purple-100 selection:text-purple-700">
+    <html lang="en" suppressHydrationWarning className="h-full bg-slate-50">
+      <body suppressHydrationWarning className="min-h-full flex flex-col bg-slate-50 text-slate-900 antialiased selection:bg-purple-100 selection:text-purple-700">
         {/* Global Structured Data JSON-LD for Google Local SEO & Sitelinks Searchbox */}
         <script
           type="application/ld+json"

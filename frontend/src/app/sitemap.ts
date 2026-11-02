@@ -2,6 +2,8 @@ import { MetadataRoute } from "next";
 import { PRODUCTS, CATEGORIES } from "@/data/products";
 import { BLOG_POSTS } from "@/data/blogs";
 import { GURGAON_AREAS } from "@/data/areas";
+import { DELHI_AREAS } from "@/data/delhi_areas";
+import { NOIDA_AREAS } from "@/data/noida_areas";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = "https://vapestoregurugram.com";
@@ -16,6 +18,18 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/products`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/delhi`,
+      lastModified: new Date(),
+      changeFrequency: "daily",
+      priority: 0.9,
+    },
+    {
+      url: `${baseUrl}/noida`,
       lastModified: new Date(),
       changeFrequency: "daily",
       priority: 0.9,
@@ -60,9 +74,25 @@ export default function sitemap(): MetadataRoute.Sitemap {
     priority: 0.85,
   }));
 
-  // Gurgaon Micro-Locality / Sector Landing Pages (High Commercial Local SEO)
-  const areaPages: MetadataRoute.Sitemap = GURGAON_AREAS.map((area) => ({
+  // Gurgaon Micro-Locality / Sector Landing Pages (Primary Core SEO - Untouched)
+  const gurgaonPages: MetadataRoute.Sitemap = GURGAON_AREAS.map((area) => ({
     url: `${baseUrl}/gurgaon/${area.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: 0.88,
+  }));
+
+  // Delhi NCR Locality Landing Pages
+  const delhiPages: MetadataRoute.Sitemap = DELHI_AREAS.map((area) => ({
+    url: `${baseUrl}/delhi/${area.slug}`,
+    lastModified: new Date(),
+    changeFrequency: "daily",
+    priority: 0.88,
+  }));
+
+  // Noida NCR Locality Landing Pages
+  const noidaPages: MetadataRoute.Sitemap = NOIDA_AREAS.map((area) => ({
+    url: `${baseUrl}/noida/${area.slug}`,
     lastModified: new Date(),
     changeFrequency: "daily",
     priority: 0.88,
@@ -87,7 +117,9 @@ export default function sitemap(): MetadataRoute.Sitemap {
   return [
     ...staticPages,
     ...categoryPages,
-    ...areaPages,
+    ...gurgaonPages,
+    ...delhiPages,
+    ...noidaPages,
     ...productPages,
     ...blogPages,
   ];

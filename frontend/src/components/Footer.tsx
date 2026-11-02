@@ -14,6 +14,8 @@ import {
 } from "lucide-react";
 import { STORE_INFO, CATEGORIES, PRODUCTS } from "@/data/products";
 import { GURGAON_AREAS } from "@/data/areas";
+import { DELHI_AREAS } from "@/data/delhi_areas";
+import { NOIDA_AREAS } from "@/data/noida_areas";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -39,8 +41,8 @@ export default function Footer() {
 
   const POPULAR_SEARCHES = [
     { text: "Vape Store in Gurgaon", href: "/products" },
-    { text: "Vape Delivery Delhi", href: "/products" },
-    { text: "Vape Store in Noida", href: "/products" },
+    { text: "Vape Delivery Delhi", href: "/delhi" },
+    { text: "Vape Store in Noida", href: "/noida" },
     { text: "Vape Store Near Me", href: "/products" },
     { text: "Disposable Vapes Gurgaon", href: "/category/disposable-vapes" },
     { text: "Yuoto Digi 15000 Puffs", href: "/product/yuoto-digi-15000-disposable-pod-device" },
@@ -378,6 +380,60 @@ export default function Footer() {
                 <span className="text-[9px] text-slate-500">({area.deliveryTime})</span>
               </Link>
             ))}
+          </div>
+        </div>
+
+        {/* 4.6. Express Delivery Across Delhi & Noida Hubs */}
+        <div className="py-6 border-b border-slate-800/80 space-y-4">
+          <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2">
+            <div className="text-[11px] font-bold text-slate-400 uppercase tracking-wider flex items-center gap-2">
+              <span>Delhi &amp; Noida Express Doorstep Hubs</span>
+              <span className="text-purple-400 text-[10px] font-semibold lowercase">
+                ⚡ same-day courier dispatch &amp; cod
+              </span>
+            </div>
+            <div className="flex items-center gap-3 text-xs">
+              <Link href="/delhi" className="text-purple-400 hover:text-purple-300 font-bold underline underline-offset-2">
+                All Delhi Areas →
+              </Link>
+              <Link href="/noida" className="text-purple-400 hover:text-purple-300 font-bold underline underline-offset-2">
+                All Noida Sectors →
+              </Link>
+            </div>
+          </div>
+
+          <div className="space-y-2">
+            <div className="text-[11px] text-slate-400 font-semibold">Delhi Delivery Localities:</div>
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
+              {DELHI_AREAS.map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/delhi/${area.slug}`}
+                  className="px-2.5 py-1 rounded-md bg-slate-900/90 border border-slate-800/90 text-[11px] text-slate-300 hover:text-purple-300 hover:border-purple-500/50 transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-purple-400" />
+                  <span>{area.name}</span>
+                  <span className="text-[9px] text-slate-500">({area.deliveryTime})</span>
+                </Link>
+              ))}
+            </div>
+          </div>
+
+          <div className="space-y-2 pt-1">
+            <div className="text-[11px] text-slate-400 font-semibold">Noida &amp; Greater Noida Sectors:</div>
+            <div className="flex flex-wrap gap-1.5 sm:gap-2">
+              {NOIDA_AREAS.map((area) => (
+                <Link
+                  key={area.slug}
+                  href={`/noida/${area.slug}`}
+                  className="px-2.5 py-1 rounded-md bg-slate-900/90 border border-slate-800/90 text-[11px] text-slate-300 hover:text-cyan-300 hover:border-cyan-500/50 transition-colors inline-flex items-center gap-1.5"
+                >
+                  <span className="h-1.5 w-1.5 rounded-full bg-cyan-400" />
+                  <span>{area.name}</span>
+                  <span className="text-[9px] text-slate-500">({area.deliveryTime})</span>
+                </Link>
+              ))}
+            </div>
           </div>
         </div>
 
