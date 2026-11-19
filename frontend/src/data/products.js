@@ -8,8 +8,8 @@ export const STORE_INFO = {
   "brandName": "Vape Store Gurgaon",
   "cityTag": "IN GURGAON",
   "domain": "vapestoregurugram.com",
-  "phone": "+91 82218 30947",
-  "whatsappNumber": "918221830947",
+  "phone": "+91 97832 70604",
+  "whatsappNumber": "919783270604",
   "email": "orders@vapestoregurugram.com",
   "city": "Gurgaon",
   "address": "Galleria Market, DLF Phase 4, Gurgaon, Haryana 122002"
